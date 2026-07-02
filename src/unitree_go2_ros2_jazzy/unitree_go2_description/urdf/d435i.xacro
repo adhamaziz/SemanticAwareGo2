@@ -1,27 +1,22 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <!-- Visual / collision / TF model: ships in ros-jazzy-realsense2-description -->
   <xacro:include filename="$(find realsense2_description)/urdf/_d435i.urdf.xacro"/>
 
-  <!-- Mount: front of the body, facing forward, slight downward tilt for
-       floor-to-wall ArUco viewing. Tune xyz/rpy once you see it in RViz. -->
   <xacro:sensor_d435i parent="trunk" name="d435i" use_nominal_extrinsics="true">
-    <origin xyz="0.326 0 0.043" rpy="0 0.0 0"/>
+    <origin xyz="0.326 0 0.043" rpy="0 0 0"/>
   </xacro:sensor_d435i>
 
-  <!-- gz sim (Gazebo Harmonic) RGBD sensor.
-       realsense2_description only ships a classic-Gazebo plugin, so this
-       block is written by hand against the d435i_color_optical_frame the
-       macro above creates. -->
-  <gazebo reference="d435i_color_optical_frame">
+  <gazebo reference="d435i_link">
     <sensor name="d435i_rgbd" type="rgbd_camera">
+      <pose>0 0 0 0 0 0</pose>
       <always_on>true</always_on>
       <update_rate>15</update_rate>
       <visualize>false</visualize>
       <topic>d435i/rgbd</topic>
       <camera>
-        <horizontal_fov>1.21126</horizontal_fov> <!-- ~69.4 deg, D435 RGB FoV -->
+        <frame_id>d435i_color_optical_frame</frame_id>
+        <horizontal_fov>1.21126</horizontal_fov>
         <image>
           <width>640</width>
           <height>480</height>
