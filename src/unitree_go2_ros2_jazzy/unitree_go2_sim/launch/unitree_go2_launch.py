@@ -162,18 +162,18 @@ def generate_launch_description():
         remappings=[("odometry/filtered", "odom")],
     )
 
-    # Go2 static frame connection (map -> odom)
-    map_to_odom_tf_node = Node(
-        package='tf2_ros',
-        name='map_to_odom_tf_node',
-        executable='static_transform_publisher',
-        parameters=[{'use_sim_time': use_sim_time}],
-        arguments=[
-            '--x', '0', '--y', '0', '--z', '0',
-            '--roll', '0', '--pitch', '0', '--yaw', '0',
-            '--frame-id', 'map', '--child-frame-id', 'odom'
-        ],
-    )
+    # # Go2 static frame connection (map -> odom)
+    # map_to_odom_tf_node = Node(
+    #     package='tf2_ros',
+    #     name='map_to_odom_tf_node',
+    #     executable='static_transform_publisher',
+    #     parameters=[{'use_sim_time': use_sim_time}],
+    #     arguments=[
+    #         '--x', '0', '--y', '0', '--z', '0',
+    #         '--roll', '0', '--pitch', '0', '--yaw', '0',
+    #         '--frame-id', 'map', '--child-frame-id', 'odom'
+    #     ],
+    # )
     
     # # Go2 URDF connection (base_footprint -> base_link)  
     # base_footprint_to_base_link_tf_node = Node(
@@ -243,17 +243,45 @@ def generate_launch_description():
         ],
     )
 
+    slam_toolbox_node = Node(
+        package='slam_toolbox',
+        executable='async_slam_toolbox_node',
+        name='slam_toolbox',
+        output='screen',
+        parameters=[
+            os.path.join(unitree_go2_sim, 'config', 'slam_toolbox_params.yaml'),
+            {'use_sim_time': use_sim_time},
+        ],
+    )
+
+    slam_lifecycle_manager = TimerAction(
+        period=5.0,  # give slam_toolbox time to fully come up first
+        actions=[
+            Node(
+                package='nav2_lifecycle_manager',
+                executable='lifecycle_manager',
+                name='lifecycle_manager_slam',
+                output='screen',
+                parameters=[{
+                    'use_sim_time': use_sim_time,
+                    'autostart': True,
+                    'node_names': ['slam_toolbox'],
+                }],
+            )
+        ]
+    )
+
     d435i_bridge = Node(
-    package='ros_gz_bridge',
-    executable='parameter_bridge',
-    name='d435i_bridge',
-    output='screen',
-    parameters=[
-        {'use_sim_time': use_sim_time},
-        {'config_file': os.path.join(unitree_go2_sim, 'config', 'd435i_bridge.yaml')},
-    ],
-)
-    
+        package='ros_gz_bridge',
+        executable='parameter_bridge',
+        name='d435i_bridge',
+        output='screen',
+        parameters=[
+            {'use_sim_time': use_sim_time},
+            {'config_file': os.path.join(unitree_go2_sim, 'config', 'd435i_bridge.yaml')},
+        ],
+    )
+        
     # Use spawner nodes directly to handle the configuration step. (load → configure → activate)
     controller_spawner_js = TimerAction(
         period=20.0,  # Wait for Gazebo to fully initialize
@@ -297,6 +325,31 @@ def generate_launch_description():
             )
         ]
     )
+
+    pointcloud_to_laserscan_node = Node(
+        package='pointcloud_to_laserscan',
+        executable='pointcloud_to_laserscan_node',
+        name='pointcloud_to_laserscan',
+        output='screen',
+        parameters=[{
+            'use_sim_time': use_sim_time,
+            'target_frame': 'base_link',
+            'transform_tolerance': 0.02,
+            'min_height': -0.1,     # slice near floor height — tune to your Velodyne's mount height
+            'max_height': 0.3,
+            'angle_min': -3.14159,
+            'angle_max': 3.14159,
+            'angle_increment': 0.0087,   # ~0.5 deg
+            'scan_time': 0.1,
+            'range_min': 0.2,
+            'range_max': 30.0,
+            'use_inf': True,
+        }],
+        remappings=[
+            ('cloud_in', '/velodyne_points/points'),
+            ('scan', '/scan'),
+        ],
+    )
     
     return LaunchDescription(
         [
@@ -320,6 +373,9 @@ def generate_launch_description():
             gazebo_spawn_robot,
             gazebo_bridge,
             d435i_bridge,
+            pointcloud_to_laserscan_node,
+            slam_toolbox_node,
+            slam_lifecycle_manager,
             
             # CHAMP controller nodes
             quadruped_controller_node,
@@ -330,7 +386,7 @@ def generate_launch_description():
             footprint_to_odom_ekf,
             
             # TF publishers for frame connections
-            map_to_odom_tf_node,
+            # map_to_odom_tf_node,
             # base_footprint_to_base_link_tf_node,
             
             # Controller spawners that handle the complete lifecycle

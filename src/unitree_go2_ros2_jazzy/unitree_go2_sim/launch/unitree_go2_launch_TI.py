@@ -242,6 +242,28 @@ def generate_launch_description():
             '/rgb_image@sensor_msgs/msg/Image[gz.msgs.Image',
         ],
     )
+
+    slam_toolbox_node = Node(
+        package='slam_toolbox',
+        executable='async_slam_toolbox_node',
+        name='slam_toolbox',
+        output='screen',
+        parameters=[
+            os.path.join(unitree_go2_sim, 'config', 'slam_toolbox_params.yaml'),
+            {'use_sim_time': use_sim_time},
+        ],
+    )
+
+    d435i_bridge = Node(
+        package='ros_gz_bridge',
+        executable='parameter_bridge',
+        name='d435i_bridge',
+        output='screen',
+        parameters=[
+            {'use_sim_time': use_sim_time},
+            {'config_file': os.path.join(unitree_go2_sim, 'config', 'd435i_bridge.yaml')},
+        ],
+    )
     
     # Use spawner nodes directly to handle the configuration step. (load → configure → activate)
     controller_spawner_js = TimerAction(
@@ -308,6 +330,9 @@ def generate_launch_description():
             robot_state_publisher_node,
             gazebo_spawn_robot,
             gazebo_bridge,
+            d435i_bridge,
+            pointcloud_to_laserscan_node,
+            slam_toolbox_node,
             
             # CHAMP controller nodes
             quadruped_controller_node,
@@ -318,7 +343,7 @@ def generate_launch_description():
             footprint_to_odom_ekf,
             
             # TF publishers for frame connections
-            map_to_odom_tf_node,
+            # map_to_odom_tf_node,
             # base_footprint_to_base_link_tf_node,
             
             # Controller spawners that handle the complete lifecycle

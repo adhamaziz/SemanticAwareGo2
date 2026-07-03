@@ -261,5 +261,120 @@
       </link>
       <static>true</static>
     </model>
+
+    <!-- ============================================= -->
+    <!-- Enclosing room walls: 20m x 15m (matches the   -->
+    <!-- planned M7 industrial warehouse world so this  -->
+    <!-- environment carries through to later trials).  -->
+    <!-- Wall thickness 0.2m, height 2.5m.               -->
+    <!-- ============================================= -->
+
+    <!-- North wall (+Y) -->
+    <model name="wall_north">
+      <static>true</static>
+      <pose>0 7.5 1.25 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>20.2 0.2 2.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>20.2 0.2 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.75 0.73 0.68 1</ambient>
+            <diffuse>0.75 0.73 0.68 1</diffuse>
+            <specular>0.3 0.3 0.3 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- South wall (-Y) -->
+    <model name="wall_south">
+      <static>true</static>
+      <pose>0 -7.5 1.25 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>20.2 0.2 2.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>20.2 0.2 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.75 0.73 0.68 1</ambient>
+            <diffuse>0.75 0.73 0.68 1</diffuse>
+            <specular>0.3 0.3 0.3 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- East wall (+X) -->
+    <model name="wall_east">
+      <static>true</static>
+      <pose>10 0 1.25 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.2 15 2.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.75 0.73 0.68 1</ambient>
+            <diffuse>0.75 0.73 0.68 1</diffuse>
+            <specular>0.3 0.3 0.3 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- West wall (-X) -->
+    <model name="wall_west">
+      <static>true</static>
+      <pose>-10 0 1.25 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.2 15 2.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.75 0.73 0.68 1</ambient>
+            <diffuse>0.75 0.73 0.68 1</diffuse>
+            <specular>0.3 0.3 0.3 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
   </world>
 </sdf>
