@@ -96,7 +96,7 @@ def generate_launch_description():
             {"gazebo": True},
             {"publish_joint_states": True},
             {"publish_joint_control": True},
-            {"publish_foot_contacts": True},
+            {"publish_foot_contacts": False},
             {"joint_controller_topic": "joint_group_effort_controller/joint_trajectory"},
             {"urdf": Command(['xacro ', LaunchConfiguration('unitree_go2_description_path')])},
             joints_config,
@@ -122,23 +122,23 @@ def generate_launch_description():
         ],
     )
 
-    base_to_footprint_ekf = Node(
-        package="robot_localization",
-        executable="ekf_node",
-        name="base_to_footprint_ekf",
-        output="screen",
-        parameters=[
-            {"base_link_frame": base_frame},
-            {"use_sim_time": use_sim_time},
-            os.path.join(
-                get_package_share_directory("champ_base"),
-                "config",
-                "ekf",
-                "base_to_footprint.yaml",
-            ),
-        ],
-        remappings=[("odometry/filtered", "odom/local")],
-    )
+    # base_to_footprint_ekf = Node(
+    #     package="robot_localization",
+    #     executable="ekf_node",
+    #     name="base_to_footprint_ekf",
+    #     output="screen",
+    #     parameters=[
+    #         {"base_link_frame": base_frame},
+    #         {"use_sim_time": use_sim_time},
+    #         os.path.join(
+    #             get_package_share_directory("champ_base"),
+    #             "config",
+    #             "ekf",
+    #             "base_to_footprint.yaml",
+    #         ),
+    #     ],
+    #     remappings=[("odometry/filtered", "odom/local")],
+    # )
 
     footprint_to_odom_ekf = Node(
         package="robot_localization",
@@ -182,18 +182,18 @@ def generate_launch_description():
     #     ],
     # )
     
-    # # Go2 URDF connection (base_footprint -> base_link)  
-    # base_footprint_to_base_link_tf_node = Node(
-    #     package='tf2_ros',
-    #     name='base_footprint_to_base_link_tf_node',
-    #     executable='static_transform_publisher',
-    #     parameters=[{'use_sim_time': use_sim_time}],
-    #     arguments=[
-    #         '--x', '0', '--y', '0', '--z', '0',
-    #         '--roll', '0', '--pitch', '0', '--yaw', '0',
-    #         '--frame-id', 'base_footprint', '--child-frame-id', 'base_link'
-    #     ],
-    # )
+    # Go2 URDF connection (base_footprint -> base_link)  
+    base_footprint_to_base_link_tf_node = Node(
+        package='tf2_ros',
+        name='base_footprint_to_base_link_tf_node',
+        executable='static_transform_publisher',
+        parameters=[{'use_sim_time': use_sim_time}],
+        arguments=[
+            '--x', '0', '--y', '0', '--z', '0',
+            '--roll', '0', '--pitch', '0', '--yaw', '0',
+            '--frame-id', 'base_footprint', '--child-frame-id', 'base_link'
+        ],
+    )
 
     rviz2 = Node(
         package='rviz2',
@@ -490,12 +490,12 @@ def generate_launch_description():
             state_estimator_node,
             
             # EKF nodes for localization
-            base_to_footprint_ekf,
+            # base_to_footprint_ekf,
             footprint_to_odom_ekf,
             
             # TF publishers for frame connections
             # map_to_odom_tf_node,
-            # base_footprint_to_base_link_tf_node,
+            base_footprint_to_base_link_tf_node,
             
             # Controller spawners that handle the complete lifecycle
             controller_spawner_js,
