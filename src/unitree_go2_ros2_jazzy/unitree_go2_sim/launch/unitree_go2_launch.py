@@ -153,15 +153,18 @@ def generate_launch_description():
             {"publish_tf": True},
             {"frequency": 50.0},
             {"two_d_mode": True},
-            {"odom0": "odom/gz"}, #raw to gz
             {"odom0": "odom/gz"},
-            {"odom0_config": [True,  True,  False,     # x, y   <- absolute pose, was False
-                  False, False, True,      # yaw    <- absolute pose, was False
-                  False, False, False,     # vx, vy off, was True
-                  False, False, False,     # vyaw off, was True
+            {"odom0_config": [True,  True,  False,    # x, y pose
+                  False, False, True,     # yaw pose (sole absolute yaw source)
+                  False, False, False,
+                  False, False, False,    # vyaw OFF
                   False, False, False]},
             {"imu0": "imu/data"},
-            {"imu0_config": [False, False, False, False, False, True, False, False, False, False, False, True, False, False, False]},
+            {"imu0_config": [False, False, False,
+                 False, False, False,     # yaw OFF
+                 False, False, False,
+                 False, False, True,      # vyaw only
+                 False, False, False]},
         ],
         remappings=[("odometry/filtered", "odom")],
     )
@@ -432,8 +435,8 @@ def generate_launch_description():
             'use_sim_time': use_sim_time,
             'target_frame': 'base_link',
             'transform_tolerance': 0.02,
-            'min_height': -0.1,     # slice near floor height — tune to your Velodyne's mount height
-            'max_height': 0.3,
+            'min_height': -0.05,     # slice near floor height — tune to your Velodyne's mount height
+            'max_height': 1.5,
             'angle_min': -3.14159,
             'angle_max': 3.14159,
             'angle_increment': 0.0087,   # ~0.5 deg
