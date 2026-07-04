@@ -1,7 +1,7 @@
 image: go2_map.pgm
 mode: trinary
 resolution: 0.050
-origin: [-9.955, -7.453, 0]
+origin: [-9.975, -13.293, 0]
 negate: 0
 occupied_thresh: 0.65
 free_thresh: 0.196

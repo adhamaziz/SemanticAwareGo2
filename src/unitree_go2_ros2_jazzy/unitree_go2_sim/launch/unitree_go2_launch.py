@@ -96,14 +96,13 @@ def generate_launch_description():
             {"gazebo": True},
             {"publish_joint_states": True},
             {"publish_joint_control": True},
-            {"publish_foot_contacts": False},
+            {"publish_foot_contacts": True},
             {"joint_controller_topic": "joint_group_effort_controller/joint_trajectory"},
             {"urdf": Command(['xacro ', LaunchConfiguration('unitree_go2_description_path')])},
             joints_config,
             links_config,
             gait_config,
             {"hardware_connected": False},
-            {"publish_foot_contacts": False},
             {"close_loop_odom": True},
         ],
         remappings=[("/cmd_vel/smooth", "/cmd_vel")],
@@ -154,8 +153,13 @@ def generate_launch_description():
             {"publish_tf": True},
             {"frequency": 50.0},
             {"two_d_mode": True},
-            {"odom0": "odom/raw"},
-            {"odom0_config": [False, False, False, False, False, False, True, True, False, False, False, True, False, False, False]},
+            {"odom0": "odom/gz"}, #raw to gz
+            {"odom0": "odom/gz"},
+            {"odom0_config": [True,  True,  False,     # x, y   <- absolute pose, was False
+                  False, False, True,      # yaw    <- absolute pose, was False
+                  False, False, False,     # vx, vy off, was True
+                  False, False, False,     # vyaw off, was True
+                  False, False, False]},
             {"imu0": "imu/data"},
             {"imu0_config": [False, False, False, False, False, True, False, False, False, False, False, True, False, False, False]},
         ],
@@ -358,7 +362,7 @@ def generate_launch_description():
                     'use_sim_time': use_sim_time,
                     'autostart': True,
                     'node_names': ['slam_toolbox'],
-                    'bond_timeout': 10.0,
+                    'bond_timeout': 0.0,
                 }],
             )
         ]
