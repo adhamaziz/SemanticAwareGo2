@@ -201,6 +201,9 @@ def generate_launch_description():
         name='rviz2',
         arguments=['-d', os.path.join(unitree_go2_sim, "rviz/rviz.rviz")],
         condition=IfCondition(LaunchConfiguration("rviz")),
+        additional_env={
+        "LD_PRELOAD": "/usr/lib/x86_64-linux-gnu/liboctomap.so" #fixes for the rviz octomap plugin not loading properly in Gazebo Sim
+    },
         # parameters=[{"use_sim_time": use_sim_time}]
     )
     

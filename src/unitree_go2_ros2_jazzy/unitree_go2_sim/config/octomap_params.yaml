@@ -1,0 +1,23 @@
+octomap_server_node:
+  ros__parameters:
+    use_sim_time: true
+
+    frame_id: map              # matches slam_toolbox/Nav2 global frame
+    resolution: 0.1            # voxel size in metres; 0.05 is finer but much heavier on CPU
+
+    sensor_model:
+      max_range: 15.0          # a bit inside your Velodyne's real range; keeps voxel updates fast
+
+    # Same floor-vs-wall lesson from pointcloud_to_laserscan: filter points near
+    # ground level BEFORE insertion, so the floor doesn't get marked as an
+    # "obstacle slab" at z=0. These are in the `frame_id` (map) frame, so they're
+    # roughly absolute height, not relative to base_link like the laserscan ones were.
+    filter_ground_plane: false   # plane-fit ground filter -- can be finicky; prefer the z-clip below first
+    point_cloud_min_z: 0.3
+    point_cloud_max_z: 2.0
+
+    # Output projected 2D slice (nav_msgs/OccupancyGrid on /projected_map) --
+    # a candidate future replacement for slam_toolbox's /map as Nav2's costmap
+    # source once this is verified working.
+    occupancy_min_z: 0.05
+    occupancy_max_z: 1.0

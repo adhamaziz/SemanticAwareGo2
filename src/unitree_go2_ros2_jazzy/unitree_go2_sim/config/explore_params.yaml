@@ -1,0 +1,24 @@
+explore_node:
+  ros__parameters:
+    use_sim_time: true
+
+    # Now sourced from octomap_server's 3D-derived 2D projection, not
+    # slam_toolbox's flat LiDAR-slice map. This is the OctoMap -> frontier
+    # explorer wiring the thesis architecture actually calls for; the
+    # /map interim baseline is no longer used here.
+    robot_base_frame: base_footprint
+    costmap_topic: /projected_map
+    # octomap_server publishes a full grid each update, not incremental
+    # OccupancyGridUpdate messages like Nav2's costmap_2d does -- so there's
+    # no equivalent "updates" topic to subscribe to. Leaving this unset is
+    # correct here, not an oversight.
+    # costmap_updates_topic: /map_updates
+
+    visualize: true              # publishes explore/frontiers MarkerArray for RViz
+    planner_frequency: 0.33       # re-plan every ~3s
+    progress_timeout: 30.0        # abandon a frontier if no progress in 30s
+    potential_scale: 3.0          # weight: prefer closer frontiers
+    orientation_scale: 0.0
+    gain_scale: 1.0               # weight: prefer larger/information-rich frontiers
+    transform_tolerance: 0.3
+    min_frontier_size: 0.75       # ignore frontiers smaller than this (metres)
