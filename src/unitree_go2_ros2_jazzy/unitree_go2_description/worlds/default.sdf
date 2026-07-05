@@ -110,7 +110,7 @@
     <!-- Quick test marker: ArUco ID 0, mounted on box1's
          -X face (the side facing back toward the robot's
          spawn point at the origin). Thin plaque, no
-         collision needed -- it's just a visual decal. -->
+         collision needed; it's just a visual decal. -->
     <!-- ============================================= -->
     <model name="aruco_marker_0">
       <static>true</static>
@@ -404,6 +404,134 @@
             <ambient>0.75 0.73 0.68 1</ambient>
             <diffuse>0.75 0.73 0.68 1</diffuse>
             <specular>0.3 0.3 0.3 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ============================================= -->
+    <!-- three equal 6.67m-wide rooms along X, each      -->
+    <!-- divider has a 1.8m doorway centered at y=0.     -->
+    <!-- Room 1: x -10..-3.33 | Room 2 (spawn): -3.33..3.33 | Room 3: 3.33..10 -->
+    <!-- ============================================= -->
+
+    <!-- Divider 1 (room1/room2 boundary, x=-3.333), north segment: y 0.9 to 7.5 -->
+    <model name="divider1_north">
+      <static>true</static>
+      <pose>-3.333 4.2 1.25 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>0.2 6.6 2.5</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>0.2 6.6 2.5</size></box></geometry>
+          <material>
+            <ambient>0.75 0.73 0.68 1</ambient>
+            <diffuse>0.75 0.73 0.68 1</diffuse>
+            <specular>0.3 0.3 0.3 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Divider 1, south segment: y -7.5 to -0.9 -->
+    <model name="divider1_south">
+      <static>true</static>
+      <pose>-3.333 -4.2 1.25 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>0.2 6.6 2.5</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>0.2 6.6 2.5</size></box></geometry>
+          <material>
+            <ambient>0.75 0.73 0.68 1</ambient>
+            <diffuse>0.75 0.73 0.68 1</diffuse>
+            <specular>0.3 0.3 0.3 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Divider 2 (room2/room3 boundary, x=3.333), north segment: y 0.9 to 7.5 -->
+    <model name="divider2_north">
+      <static>true</static>
+      <pose>3.333 4.2 1.25 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>0.2 6.6 2.5</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>0.2 6.6 2.5</size></box></geometry>
+          <material>
+            <ambient>0.75 0.73 0.68 1</ambient>
+            <diffuse>0.75 0.73 0.68 1</diffuse>
+            <specular>0.3 0.3 0.3 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Divider 2, south segment: y -7.5 to -0.9 -->
+    <model name="divider2_south">
+      <static>true</static>
+      <pose>3.333 -4.2 1.25 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>0.2 6.6 2.5</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>0.2 6.6 2.5</size></box></geometry>
+          <material>
+            <ambient>0.75 0.73 0.68 1</ambient>
+            <diffuse>0.75 0.73 0.68 1</diffuse>
+            <specular>0.3 0.3 0.3 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ArUco marker 1: divider1's room-1-facing side (-X face), height 0.8m -->
+    <model name="aruco_marker_1">
+      <static>true</static>
+      <pose>-3.436 4.2 0.8 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>0.005 0.15 0.15</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>textures/marker_1.png</albedo_map>
+                <metalness>0.0</metalness>
+                <roughness>1.0</roughness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ArUco marker 2: divider2's room-3-facing side (+X face), height 1.0m -->
+    <model name="aruco_marker_2">
+      <static>true</static>
+      <pose>3.436 -4.2 1.0 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>0.005 0.15 0.15</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>textures/marker_2.png</albedo_map>
+                <metalness>0.0</metalness>
+                <roughness>1.0</roughness>
+              </metal>
+            </pbr>
           </material>
         </visual>
       </link>
