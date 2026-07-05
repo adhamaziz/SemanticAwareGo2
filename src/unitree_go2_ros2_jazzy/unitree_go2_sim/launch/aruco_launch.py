@@ -25,6 +25,7 @@ def generate_launch_description():
             "cam_base_topic": "/d435i/color/image_raw",
             "marker_size": 0.15,
             "image_is_rectified": True,   # simulated cameras have no real lens distortion
+            "marker_dict": "6X6_250",
         }],
     )
 
