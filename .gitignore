@@ -35,6 +35,3 @@ __pycache__/
 .vscode/
 .DS_Store
 *.swp
-
-# rviz2 generated files
-*.rviz
