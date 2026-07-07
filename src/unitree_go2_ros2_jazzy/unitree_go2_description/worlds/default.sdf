@@ -1,37 +1,65 @@
 <?xml version="1.0" ?>
+<!-- ==================================================================
+     ANNOTATED REFERENCE COPY of default.sdf  (your original is unchanged)
+
+     QUICK CHEAT SHEET
+     =================
+     <pose> X Y Z ROLL PITCH YAW </pose>
+        X Y Z  = position in meters (X=east/west, Y=north/south, Z=up)
+        ROLL PITCH YAW = rotation in RADIANS around X, Y, Z axes
+        Examples:  0.5 rad = ~28.6 deg   |   1.5708 = 90 deg   |   3.1416 = 180 deg
+        "5 0 0.5 0 0 0"  ->  5m along X, on the ground (Z=0.5 because the
+        box is 1m tall and pose is its CENTER), no rotation.
+
+     <size> for a box:  WIDTH(X) DEPTH(Y) HEIGHT(Z)  in meters
+     <radius>/<length> for a cylinder: in meters
+
+     COLORS: <ambient>/<diffuse>/<specular> = R G B A, each 0..1
+        1 0 0 1 = red | 0 1 0 1 = green | 0 0 1 1 = blue
+        1 1 0 1 = yellow | 0 1 1 1 = cyan | 1 0 1 1 = magenta
+        0.5 0.5 0.5 1 = gray | last number = opacity (1 = solid)
+        diffuse = the main color you see. ambient = color in shadow.
+        specular = shininess highlight color.
+
+     <static>true</static> = object never moves (walls, decor).
+        Set to false if you want it pushable / affected by gravity.
+
+     <collision> = the invisible physics shape (what the robot bumps into)
+     <visual>    = what you SEE. Usually keep both the same shape/size.
+     ================================================================== -->
 <sdf version="1.8">
   <world name="default">
+
+    <!-- PHYSICS ENGINE: how the simulation steps time.
+         max_step_size: smaller = more accurate but slower (0.001 = 1ms).
+         real_time_factor: 1.0 = run at real speed. -->
     <physics name="1ms" type="bullet-featherstone">
       <max_step_size>0.001</max_step_size>
       <real_time_factor>1.0</real_time_factor>
     </physics>
-    
-    <!-- Plugins -->
-    <plugin
-      filename="gz-sim-physics-system"
-      name="gz::sim::systems::Physics">
-    </plugin>
-    <plugin
-      filename="gz-sim-sensors-system"
-      name="gz::sim::systems::Sensors">
+
+    <!-- PLUGINS: required Gazebo systems. Don't touch these unless you
+         know why. Physics = movement, Sensors = cameras/lidar,
+         UserCommands = spawn/delete via GUI, SceneBroadcaster = lets
+         the GUI see the world. -->
+    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics"/>
+    <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors">
       <render_engine>ogre2</render_engine>
     </plugin>
-    <plugin
-      filename="gz-sim-user-commands-system"
-      name="gz::sim::systems::UserCommands">
-    </plugin>
-    <plugin
-      filename="gz-sim-scene-broadcaster-system"
-      name="gz::sim::systems::SceneBroadcaster">
-    </plugin>
-    
-    <!-- Lights -->
+    <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands"/>
+    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster"/>
+
+    <!-- SUN: a directional light (like sunlight).
+         pose: where the light "object" sits (mostly cosmetic for directional).
+         diffuse: light color/brightness (0.8 = fairly bright white).
+         direction: which way the light rays point (here: down and slightly sideways).
+         cast_shadows: true = objects cast shadows (costs a bit of performance). -->
     <light type="directional" name="sun">
-      <cast_shadows>true</cast_shadows>
+      <cast_shadows>false</cast_shadows>
       <pose>0 0 10 0 0 0</pose>
       <diffuse>0.8 0.8 0.8 1</diffuse>
       <specular>0.2 0.2 0.2 1</specular>
-      <attenuation>
+      <attenuation>            <!-- how light fades with distance -->
         <range>1000</range>
         <constant>0.9</constant>
         <linear>0.01</linear>
@@ -40,15 +68,17 @@
       <direction>-0.5 0.1 -0.9</direction>
     </light>
 
-    <!-- Ground Plane -->
+    <!-- GROUND: a flat 100x100m plane at Z=0.
+         Change <size> to make the floor bigger/smaller.
+         Change the material colors to recolor the floor. -->
     <model name="ground_plane">
       <static>true</static>
       <link name="link">
         <collision name="collision">
           <geometry>
             <plane>
-              <normal>0 0 1</normal>
-              <size>100 100</size>
+              <normal>0 0 1</normal>      <!-- plane faces up -->
+              <size>100 100</size>        <!-- floor dimensions in meters -->
             </plane>
           </geometry>
         </collision>
@@ -59,7 +89,7 @@
               <size>100 100</size>
             </plane>
           </geometry>
-          <material>
+          <material>                       <!-- light gray floor -->
             <ambient>0.8 0.8 0.8 1</ambient>
             <diffuse>0.8 0.8 0.8 1</diffuse>
             <specular>0.8 0.8 0.8 1</specular>
@@ -67,106 +97,94 @@
         </visual>
       </link>
     </model>
-    
-    <!-- Box 1 -->
+
+    <!-- BOX 1 (RED): at x=5, y=0. Z=0.5 so its bottom touches the floor
+         (pose is the CENTER; box height is 1m, so center = 0.5).
+         To move it: edit the first 3 pose numbers.
+         To rotate it around vertical axis: edit the LAST pose number (yaw, radians).
+         To resize: edit BOTH <size> tags (collision AND visual) to match,
+         and adjust pose Z to height/2 so it still sits on the ground. -->
     <model name="box1">
-      <pose>5 0 0.5 0 0 0</pose>
+      <pose>7 0 0.5 0 0 0</pose>          <!-- X Y Z roll pitch yaw -->
       <link name="box_link">
-        <inertial>
+        <inertial>                        <!-- mass properties; only matters
+                                               if static=false (dynamic) -->
           <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
+            <ixx>1</ixx><ixy>0</ixy><ixz>0</ixz>
+            <iyy>1</iyy><iyz>0</iyz>
             <izz>1</izz>
           </inertia>
-          <mass>1.0</mass>
+          <mass>1.0</mass>                <!-- kilograms -->
         </inertial>
         <collision name="box_collision">
           <geometry>
-            <box>
-              <size>1 1 1</size>
-            </box>
+            <box><size>1 1 1</size></box> <!-- 1m cube (physics shape) -->
           </geometry>
         </collision>
         <visual name="box_visual">
           <geometry>
-            <box>
-              <size>1 1 1</size>
-            </box>
+            <box><size>1 1 1</size></box> <!-- visible shape, keep matching -->
           </geometry>
-          <material>
+          <material>                       <!-- RED: R=1 G=0 B=0 -->
             <ambient>1 0 0 1</ambient>
             <diffuse>1 0 0 1</diffuse>
             <specular>1 0 0 1</specular>
           </material>
         </visual>
       </link>
-      <static>true</static>
+      <static>true</static>              <!-- won't move; set false to make pushable -->
     </model>
 
-    <!-- ============================================= -->
-    <!-- Quick test marker: ArUco ID 0, mounted on box1's
-         -X face (the side facing back toward the robot's
-         spawn point at the origin). Thin plaque, no
-         collision needed; it's just a visual decal. -->
-    <!-- ============================================= -->
+    <!-- ARUCO MARKER 0: a thin white plaque (0.5cm thick, 15x15cm) stuck
+         to box1's -X face, facing the robot spawn at the origin.
+         Pose X = 4.497 = box face at 4.5 minus half the plaque thickness.
+         No <collision> on purpose - it's just a visual decal.
+         The image comes from <albedo_map> (textures/marker_0.png).
+         To move the marker up/down the wall: change pose Z.
+         To put it on a different face: change pose X/Y and add yaw. -->
     <model name="aruco_marker_0">
       <static>true</static>
-      <pose>4.497 0 0.5 0 0 0</pose>
+      <pose>6.497 0 0.5 0 0 0</pose>
       <link name="link">
         <visual name="visual">
           <geometry>
-            <box>
-              <size>0.005 0.15 0.15</size>
-            </box>
+            <box><size>0.005 0.15 0.15</size></box>  <!-- thickness, width, height -->
           </geometry>
           <material>
             <ambient>1 1 1 1</ambient>
             <diffuse>1 1 1 1</diffuse>
             <specular>0.1 0.1 0.1 1</specular>
-            <pbr>
+            <pbr>                          <!-- physically-based rendering:
+                                                applies the marker image -->
               <metal>
-                <albedo_map>textures/marker_0.png</albedo_map>
-                <metalness>0.0</metalness>
-                <roughness>1.0</roughness>
+                <albedo_map>textures/marker_0.png</albedo_map>  <!-- the texture file -->
+                <metalness>0.0</metalness>  <!-- 0 = not metallic -->
+                <roughness>1.0</roughness>  <!-- 1 = matte, no glare (good for cameras) -->
               </metal>
             </pbr>
           </material>
         </visual>
       </link>
     </model>
-    
-    <!-- Box 2 -->
+
+    <!-- BOX 2 (GREEN): at x=-3, y=4, rotated 0.5 rad (~28.6 deg) around Z. -->
     <model name="box2">
-      <pose>-3 4 0.5 0 0 0.5</pose>
+      <pose>-7 4 0.5 0 0 0.5</pose>       <!-- last number = yaw rotation -->
       <link name="box_link">
         <inertial>
           <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
+            <ixx>1</ixx><ixy>0</ixy><ixz>0</ixz>
+            <iyy>1</iyy><iyz>0</iyz>
             <izz>1</izz>
           </inertia>
           <mass>1.0</mass>
         </inertial>
         <collision name="box_collision">
-          <geometry>
-            <box>
-              <size>1 1 1</size>
-            </box>
-          </geometry>
+          <geometry><box><size>1 1 1</size></box></geometry>
         </collision>
         <visual name="box_visual">
-          <geometry>
-            <box>
-              <size>1 1 1</size>
-            </box>
-          </geometry>
-          <material>
+          <geometry><box><size>1 1 1</size></box></geometry>
+          <material>                       <!-- GREEN: R=0 G=1 B=0 -->
             <ambient>0 1 0 1</ambient>
             <diffuse>0 1 0 1</diffuse>
             <specular>0 1 0 1</specular>
@@ -175,36 +193,25 @@
       </link>
       <static>true</static>
     </model>
-    
-    <!-- Box 3 -->
+
+    <!-- BOX 3 (BLUE): at x=0, y=-5, rotated 0.7 rad (~40 deg). -->
     <model name="box3">
-      <pose>0 -5 0.5 0 0 0.7</pose>
+      <pose>0 -4 0.5 0 0 0.7</pose>
       <link name="box_link">
         <inertial>
           <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
+            <ixx>1</ixx><ixy>0</ixy><ixz>0</ixz>
+            <iyy>1</iyy><iyz>0</iyz>
             <izz>1</izz>
           </inertia>
           <mass>1.0</mass>
         </inertial>
         <collision name="box_collision">
-          <geometry>
-            <box>
-              <size>1 1 1</size>
-            </box>
-          </geometry>
+          <geometry><box><size>1 1 1</size></box></geometry>
         </collision>
         <visual name="box_visual">
-          <geometry>
-            <box>
-              <size>1 1 1</size>
-            </box>
-          </geometry>
-          <material>
+          <geometry><box><size>1 1 1</size></box></geometry>
+          <material>                       <!-- BLUE: R=0 G=0 B=1 -->
             <ambient>0 0 1 1</ambient>
             <diffuse>0 0 1 1</diffuse>
             <specular>0 0 1 1</specular>
@@ -213,18 +220,17 @@
       </link>
       <static>true</static>
     </model>
-    
-    <!-- Cylinder 1 -->
+
+    <!-- CYLINDER 1 (YELLOW): at x=3, y=3.
+         radius = 0.5m, length (height) = 1m, so pose Z=0.5 to sit on floor.
+         Rotating a cylinder around Z (yaw) does nothing visible - it's round. -->
     <model name="cylinder1">
-      <pose>3 3 0.5 0 0 0</pose>
+      <pose>1 3 0.5 0 0 0</pose>
       <link name="cylinder_link">
         <inertial>
           <inertia>
-            <ixx>0.1458</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>0.1458</iyy>
-            <iyz>0</iyz>
+            <ixx>0.1458</ixx><ixy>0</ixy><ixz>0</ixz>
+            <iyy>0.1458</iyy><iyz>0</iyz>
             <izz>0.125</izz>
           </inertia>
           <mass>1.0</mass>
@@ -232,8 +238,8 @@
         <collision name="cylinder_collision">
           <geometry>
             <cylinder>
-              <radius>0.5</radius>
-              <length>1.0</length>
+              <radius>0.5</radius>        <!-- half the width, meters -->
+              <length>1.0</length>        <!-- height, meters -->
             </cylinder>
           </geometry>
         </collision>
@@ -244,7 +250,7 @@
               <length>1.0</length>
             </cylinder>
           </geometry>
-          <material>
+          <material>                       <!-- YELLOW: R=1 G=1 B=0 -->
             <ambient>1 1 0 1</ambient>
             <diffuse>1 1 0 1</diffuse>
             <specular>1 1 0 1</specular>
@@ -253,38 +259,29 @@
       </link>
       <static>true</static>
     </model>
-    
-    <!-- Cylinder 2 -->
+
+    <!-- CYLINDER 2 (CYAN): at x=-4, y=-3. Same shape as cylinder1. -->
     <model name="cylinder2">
-      <pose>-4 -3 0.5 0 0 0</pose>
+      <pose>-8 -3 0.5 0 0 0</pose>
       <link name="cylinder_link">
         <inertial>
           <inertia>
-            <ixx>0.1458</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>0.1458</iyy>
-            <iyz>0</iyz>
+            <ixx>0.1458</ixx><ixy>0</ixy><ixz>0</ixz>
+            <iyy>0.1458</iyy><iyz>0</iyz>
             <izz>0.125</izz>
           </inertia>
           <mass>1.0</mass>
         </inertial>
         <collision name="cylinder_collision">
           <geometry>
-            <cylinder>
-              <radius>0.5</radius>
-              <length>1.0</length>
-            </cylinder>
+            <cylinder><radius>0.5</radius><length>1.0</length></cylinder>
           </geometry>
         </collision>
         <visual name="cylinder_visual">
           <geometry>
-            <cylinder>
-              <radius>0.5</radius>
-              <length>1.0</length>
-            </cylinder>
+            <cylinder><radius>0.5</radius><length>1.0</length></cylinder>
           </geometry>
-          <material>
+          <material>                       <!-- CYAN: R=0 G=1 B=1 -->
             <ambient>0 1 1 1</ambient>
             <diffuse>0 1 1 1</diffuse>
             <specular>0 1 1 1</specular>
@@ -294,32 +291,30 @@
       <static>true</static>
     </model>
 
-    <!-- ============================================= -->
-    <!-- Enclosing room walls: 20m x 15m (matches the   -->
-    <!-- planned M7 industrial warehouse world so this  -->
-    <!-- environment carries through to later trials).  -->
-    <!-- Wall thickness 0.2m, height 2.5m.               -->
-    <!-- ============================================= -->
+    <!-- ==============================================================
+         OUTER WALLS: enclose a 20m (X) x 15m (Y) room.
+         Each wall is a thin box: 0.2m thick, 2.5m tall.
+         Pose Z = 1.25 (half the 2.5m height, so it stands on the floor).
+         HOW WALLS WORK:
+           - North/South walls are long in X:  size = 20.2  0.2  2.5
+           - East/West  walls are long in Y:   size = 0.2  15   2.5
+           - The 20.2 (vs 20) makes corners overlap so there's no gap.
+         To make the room bigger: change wall <size> lengths AND move the
+         wall poses outward to the new half-dimensions.
+         To make walls taller: change size Z (2.5) and set pose Z = newHeight/2.
+         ============================================================== -->
 
-    <!-- North wall (+Y) -->
+    <!-- NORTH WALL: sits at y=+7.5 (half of the 15m room depth). -->
     <model name="wall_north">
       <static>true</static>
       <pose>0 7.5 1.25 0 0 0</pose>
       <link name="link">
         <collision name="collision">
-          <geometry>
-            <box>
-              <size>20.2 0.2 2.5</size>
-            </box>
-          </geometry>
+          <geometry><box><size>20.2 0.2 2.5</size></box></geometry>
         </collision>
         <visual name="visual">
-          <geometry>
-            <box>
-              <size>20.2 0.2 2.5</size>
-            </box>
-          </geometry>
-          <material>
+          <geometry><box><size>20.2 0.2 2.5</size></box></geometry>
+          <material>                       <!-- warm off-white / beige -->
             <ambient>0.75 0.73 0.68 1</ambient>
             <diffuse>0.75 0.73 0.68 1</diffuse>
             <specular>0.3 0.3 0.3 1</specular>
@@ -328,24 +323,16 @@
       </link>
     </model>
 
-    <!-- South wall (-Y) -->
+    <!-- SOUTH WALL: mirror of north, at y=-7.5. -->
     <model name="wall_south">
       <static>true</static>
       <pose>0 -7.5 1.25 0 0 0</pose>
       <link name="link">
         <collision name="collision">
-          <geometry>
-            <box>
-              <size>20.2 0.2 2.5</size>
-            </box>
-          </geometry>
+          <geometry><box><size>20.2 0.2 2.5</size></box></geometry>
         </collision>
         <visual name="visual">
-          <geometry>
-            <box>
-              <size>20.2 0.2 2.5</size>
-            </box>
-          </geometry>
+          <geometry><box><size>20.2 0.2 2.5</size></box></geometry>
           <material>
             <ambient>0.75 0.73 0.68 1</ambient>
             <diffuse>0.75 0.73 0.68 1</diffuse>
@@ -355,24 +342,16 @@
       </link>
     </model>
 
-    <!-- East wall (+X) -->
+    <!-- EAST WALL: at x=+10 (half of the 20m room width), long in Y. -->
     <model name="wall_east">
       <static>true</static>
       <pose>10 0 1.25 0 0 0</pose>
       <link name="link">
         <collision name="collision">
-          <geometry>
-            <box>
-              <size>0.2 15 2.5</size>
-            </box>
-          </geometry>
+          <geometry><box><size>0.2 15 2.5</size></box></geometry>
         </collision>
         <visual name="visual">
-          <geometry>
-            <box>
-              <size>0.2 15 2.5</size>
-            </box>
-          </geometry>
+          <geometry><box><size>0.2 15 2.5</size></box></geometry>
           <material>
             <ambient>0.75 0.73 0.68 1</ambient>
             <diffuse>0.75 0.73 0.68 1</diffuse>
@@ -382,24 +361,16 @@
       </link>
     </model>
 
-    <!-- West wall (-X) -->
+    <!-- WEST WALL: mirror of east, at x=-10. -->
     <model name="wall_west">
       <static>true</static>
       <pose>-10 0 1.25 0 0 0</pose>
       <link name="link">
         <collision name="collision">
-          <geometry>
-            <box>
-              <size>0.2 15 2.5</size>
-            </box>
-          </geometry>
+          <geometry><box><size>0.2 15 2.5</size></box></geometry>
         </collision>
         <visual name="visual">
-          <geometry>
-            <box>
-              <size>0.2 15 2.5</size>
-            </box>
-          </geometry>
+          <geometry><box><size>0.2 15 2.5</size></box></geometry>
           <material>
             <ambient>0.75 0.73 0.68 1</ambient>
             <diffuse>0.75 0.73 0.68 1</diffuse>
@@ -409,16 +380,22 @@
       </link>
     </model>
 
-    <!-- ============================================= -->
-    <!-- three equal 6.67m-wide rooms along X, each      -->
-    <!-- divider has a 1.8m doorway centered at y=0.     -->
-    <!-- Room 1: x -10..-3.33 | Room 2 (spawn): -3.33..3.33 | Room 3: 3.33..10 -->
-    <!-- ============================================= -->
+    <!-- ==============================================================
+         INTERIOR DIVIDERS: split the space into 3 rooms along X.
+         Each divider is built as TWO wall segments with a gap between
+         them - that gap IS the doorway (1.8m wide, centered at y=0).
+         Math: segment length 6.6m, centered at y=±4.2
+               -> covers y = 0.9..7.5 and y = -7.5..-0.9
+               -> doorway = y -0.9..+0.9 = 1.8m wide.
+         To WIDEN the doorway: shorten segment <size> Y and push the
+         pose Y centers further from 0.
+         To MOVE the doorway: shift both segments' pose Y and lengths.
+         ============================================================== -->
 
-    <!-- Divider 1 (room1/room2 boundary, x=-3.333), north segment: y 0.9 to 7.5 -->
+    <!-- DIVIDER 1 NORTH SEGMENT: wall between room1 and room2, upper half. -->
     <model name="divider1_north">
       <static>true</static>
-      <pose>-3.333 4.2 1.25 0 0 0</pose>
+      <pose>-3.333 4.2 1.25 0 0 0</pose>   <!-- x = room boundary, y = segment center -->
       <link name="link">
         <collision name="collision">
           <geometry><box><size>0.2 6.6 2.5</size></box></geometry>
@@ -434,7 +411,7 @@
       </link>
     </model>
 
-    <!-- Divider 1, south segment: y -7.5 to -0.9 -->
+    <!-- DIVIDER 1 SOUTH SEGMENT: lower half; gap between them = doorway. -->
     <model name="divider1_south">
       <static>true</static>
       <pose>-3.333 -4.2 1.25 0 0 0</pose>
@@ -453,7 +430,7 @@
       </link>
     </model>
 
-    <!-- Divider 2 (room2/room3 boundary, x=3.333), north segment: y 0.9 to 7.5 -->
+    <!-- DIVIDER 2 NORTH SEGMENT: wall between room2 and room3, upper half. -->
     <model name="divider2_north">
       <static>true</static>
       <pose>3.333 4.2 1.25 0 0 0</pose>
@@ -472,7 +449,7 @@
       </link>
     </model>
 
-    <!-- Divider 2, south segment: y -7.5 to -0.9 -->
+    <!-- DIVIDER 2 SOUTH SEGMENT. -->
     <model name="divider2_south">
       <static>true</static>
       <pose>3.333 -4.2 1.25 0 0 0</pose>
@@ -491,7 +468,9 @@
       </link>
     </model>
 
-    <!-- ArUco marker 1: divider1's room-1-facing side (-X face), height 0.8m -->
+    <!-- ARUCO MARKER 1: on divider1's west face (room-1 side), 0.8m high.
+         Pose X = -3.436 = wall center (-3.333) minus half wall thickness
+         (0.1) minus half plaque thickness (0.0025) ~= flush on the surface. -->
     <model name="aruco_marker_1">
       <static>true</static>
       <pose>-3.436 4.2 0.8 0 0 0</pose>
@@ -514,7 +493,8 @@
       </link>
     </model>
 
-    <!-- ArUco marker 2: divider2's room-3-facing side (+X face), height 1.0m -->
+    <!-- ARUCO MARKER 2: on divider2's east face (room-3 side), 1.0m high.
+         Pose X = +3.436 (mirrored to the other side of the wall). -->
     <model name="aruco_marker_2">
       <static>true</static>
       <pose>3.436 -4.2 1.0 0 0 0</pose>

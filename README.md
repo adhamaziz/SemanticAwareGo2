@@ -39,7 +39,7 @@ A ROS 2 (Jazzy) workspace for the Unitree Go2 quadruped, simulated in Gazebo Har
 ```bash
 # 1. Build and enter the dev container
 xhost +local:root
-docker compose run --rm unitree_go2_dev bash
+docker compose run --rm --remove-orphans unitree_go2_dev bash
 
 # 2. Inside the container: build the workspace
 cd /home/ros2_ws
@@ -79,6 +79,13 @@ In a second terminal (`docker compose exec unitree_go2_dev bash`, then `source i
 
 ```bash
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
+```
+### Gazebo World
+
+This launch the gazebo world with default.sdf without any rviz, launches.
+
+```bash
+gz sim /home/ros2_ws/src/unitree_go2_ros2_jazzy/unitree_go2_description/worlds/default.sdf
 ```
 
 ### Sensor topics
