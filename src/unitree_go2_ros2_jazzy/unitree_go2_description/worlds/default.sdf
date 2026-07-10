@@ -169,7 +169,7 @@
 
     <!-- BOX 2 (GREEN): at x=-3, y=4, rotated 0.5 rad (~28.6 deg) around Z. -->
     <model name="box2">
-      <pose>-7 4 0.5 0 0 0.5</pose>       <!-- last number = yaw rotation -->
+      <pose>-7 4 0.5 0 0 0</pose>       <!-- last number = yaw rotation -->
       <link name="box_link">
         <inertial>
           <inertia>
@@ -196,7 +196,7 @@
 
     <!-- BOX 3 (BLUE): at x=0, y=-5, rotated 0.7 rad (~40 deg). -->
     <model name="box3">
-      <pose>0 -4 0.5 0 0 0.7</pose>
+      <pose>0 -4 0.5 0 0 0</pose>
       <link name="box_link">
         <inertial>
           <inertia>
@@ -395,13 +395,13 @@
     <!-- DIVIDER 1 NORTH SEGMENT: wall between room1 and room2, upper half. -->
     <model name="divider1_north">
       <static>true</static>
-      <pose>-3.333 4.2 1.25 0 0 0</pose>   <!-- x = room boundary, y = segment center -->
+      <pose>-3.333 2.31 1.25 0 0 0</pose>   <!-- x = room boundary, y = segment center -->
       <link name="link">
         <collision name="collision">
-          <geometry><box><size>0.2 6.6 2.5</size></box></geometry>
+          <geometry><box><size>0.2 10.2 2.5</size></box></geometry>
         </collision>
         <visual name="visual">
-          <geometry><box><size>0.2 6.6 2.5</size></box></geometry>
+          <geometry><box><size>0.2 10.2 2.5</size></box></geometry>
           <material>
             <ambient>0.75 0.73 0.68 1</ambient>
             <diffuse>0.75 0.73 0.68 1</diffuse>
@@ -414,13 +414,13 @@
     <!-- DIVIDER 1 SOUTH SEGMENT: lower half; gap between them = doorway. -->
     <model name="divider1_south">
       <static>true</static>
-      <pose>-3.333 -4.2 1.25 0 0 0</pose>
+      <pose>-3.333 -5.9 1.25 0 0 0</pose>
       <link name="link">
         <collision name="collision">
-          <geometry><box><size>0.2 6.6 2.5</size></box></geometry>
+          <geometry><box><size>0.2 3.4 2.5</size></box></geometry>
         </collision>
         <visual name="visual">
-          <geometry><box><size>0.2 6.6 2.5</size></box></geometry>
+          <geometry><box><size>0.2 3.4 2.5</size></box></geometry>
           <material>
             <ambient>0.75 0.73 0.68 1</ambient>
             <diffuse>0.75 0.73 0.68 1</diffuse>
@@ -433,13 +433,13 @@
     <!-- DIVIDER 2 NORTH SEGMENT: wall between room2 and room3, upper half. -->
     <model name="divider2_north">
       <static>true</static>
-      <pose>3.333 4.2 1.25 0 0 0</pose>
+      <pose>3.333 5.9 1.25 0 0 0</pose>
       <link name="link">
         <collision name="collision">
-          <geometry><box><size>0.2 6.6 2.5</size></box></geometry>
+          <geometry><box><size>0.2 3.4 2.5</size></box></geometry>
         </collision>
         <visual name="visual">
-          <geometry><box><size>0.2 6.6 2.5</size></box></geometry>
+          <geometry><box><size>0.2 3.4 2.5</size></box></geometry>
           <material>
             <ambient>0.75 0.73 0.68 1</ambient>
             <diffuse>0.75 0.73 0.68 1</diffuse>
@@ -452,13 +452,13 @@
     <!-- DIVIDER 2 SOUTH SEGMENT. -->
     <model name="divider2_south">
       <static>true</static>
-      <pose>3.333 -4.2 1.25 0 0 0</pose>
+      <pose>3.333 -2.6 1.25 0 0 0</pose>
       <link name="link">
         <collision name="collision">
-          <geometry><box><size>0.2 6.6 2.5</size></box></geometry>
+          <geometry><box><size>0.2 10.0 2.5</size></box></geometry>
         </collision>
         <visual name="visual">
-          <geometry><box><size>0.2 6.6 2.5</size></box></geometry>
+          <geometry><box><size>0.2 10.0 2.5</size></box></geometry>
           <material>
             <ambient>0.75 0.73 0.68 1</ambient>
             <diffuse>0.75 0.73 0.68 1</diffuse>
@@ -473,7 +473,7 @@
          (0.1) minus half plaque thickness (0.0025) ~= flush on the surface. -->
     <model name="aruco_marker_1">
       <static>true</static>
-      <pose>-3.436 4.2 0.8 0 0 0</pose>
+      <pose>-7.503 4 0.8 0 0 0</pose>
       <link name="link">
         <visual name="visual">
           <geometry><box><size>0.005 0.15 0.15</size></box></geometry>
@@ -497,7 +497,7 @@
          Pose X = +3.436 (mirrored to the other side of the wall). -->
     <model name="aruco_marker_2">
       <static>true</static>
-      <pose>3.436 -4.2 1.0 0 0 0</pose>
+      <pose>-0.503 -4 0.5 0 0 0</pose>
       <link name="link">
         <visual name="visual">
           <geometry><box><size>0.005 0.15 0.15</size></box></geometry>
