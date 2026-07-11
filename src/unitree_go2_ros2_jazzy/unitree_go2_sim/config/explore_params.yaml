@@ -16,9 +16,9 @@ explore_node:
 
     visualize: true              # publishes explore/frontiers MarkerArray for RViz
     planner_frequency: 0.33       # re-plan every ~3s
-    progress_timeout: 30.0        # abandon a frontier if no progress in 30s
-    potential_scale: 3.0          # weight: prefer closer frontiers
+    progress_timeout: 30.0      # abandon a frontier if no progress in 30s
+    potential_scale: 3.2          # weight: prefer closer frontiers
     orientation_scale: 0.0
-    gain_scale: 1.0               # weight: prefer larger/information-rich frontiers
+    gain_scale: 1.2          # weight: prefer larger/information-rich frontiers
     transform_tolerance: 0.3
-    min_frontier_size: 0.75       # ignore frontiers smaller than this (metres)
+    min_frontier_size: 0.20       # ignore frontiers smaller than this (metres)

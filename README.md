@@ -178,6 +178,16 @@ Config: `unitree_go2_sim/config/explore_params.yaml`. Frontier candidates are vi
 
 With the three-room world above, this is a reasonable test of exploration through doorways: starting from the middle room, `explore_lite` should identify each doorway as a frontier boundary, drive through, fully explore the adjacent room, and then return to explore whichever room (or remaining space) is left.
 
+## Autonomous exploration trial experiment
+
+```bash
+ros2 launch unitree_go2_sim pilot_trial_launch.py trial_name:=trial_x
+```
+
+To experiment the time taken for complete exploration with comparison of space coverage and time taken. Change the trial_X with trial number: 1,2,3.. etc
+
+For current experiments, the explore_params.yaml is edited with tuning the potential scale and the gain scale, to achieve the sweet spot.
+
 ## ArUco marker detection
 
 ```bash

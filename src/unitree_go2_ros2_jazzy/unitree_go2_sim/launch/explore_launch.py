@@ -26,7 +26,7 @@ def generate_launch_description():
         output="screen",
         parameters=[
             explore_params_file,
-            {"use_sim_time": use_sim_time},
+            # {"use_sim_time": use_sim_time},
         ],
     )
 
