@@ -5,6 +5,7 @@ FROM osrf/ros:jazzy-desktop
 ENV LANG=C.UTF-8
 ENV LC_ALL=C.UTF-8
 ENV RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+ENV YOLO_CONFIG_DIR=/home/ros2_ws/.ultralytics
 
 # -----------------------------------------------------
 # 1. Install System Tools & Python Dependencies
@@ -52,13 +53,19 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ros-jazzy-pointcloud-to-laserscan \
     ros-jazzy-octomap-server \
     ros-jazzy-octomap-rviz-plugins \
+    ros-jazzy-vision-msgs \
     && rm -rf /var/lib/apt/lists/*
 
 # -----------------------------------------------------
 # 3. ROS Dependency & Workspace Setup
 # -----------------------------------------------------
-# Run rosdep update as root (or the default user)
+    # Run rosdep update as root (or the default user)
 RUN rosdep update --rosdistro jazzy
+
+    #Install PyTorch and Ultralytics YOLOv8
+RUN pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cpu --break-system-packages
+RUN pip3 install ultralytics --break-system-packages --ignore-installed numpy
+RUN pip3 install "numpy<2" --break-system-packages
 
 # Set the working directory (replaces 'cd ~/ros2_ws')
 WORKDIR /home/ros2_ws
