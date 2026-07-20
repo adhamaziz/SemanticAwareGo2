@@ -41,10 +41,17 @@ class InspectionLogger(Node):
         self.declare_parameter('output_json', 'inspection_report.json')
         self.declare_parameter('reinspect_position_threshold_m', 0.05)
         self.declare_parameter('target_frame', 'map')
+        self.declare_parameter(
+            'camera_frame', 'd435i_color_optical_frame'
+        )  # NOT msg.header.frame_id -- that reports "go2/base_link/d435i_rgbd",
+           # an orphaned name Gazebo substitutes when a sensor's gz_frame_id is
+           # invalid (see the "not defined in SDF" warnings in every launch log).
+           # It was never wired to a real broadcast TF frame. This one is.
 
         self.output_path = self.get_parameter('output_json').value
         self.reinspect_thresh = self.get_parameter('reinspect_position_threshold_m').value
         self.target_frame = self.get_parameter('target_frame').value
+        self.camera_frame = self.get_parameter('camera_frame').value
 
         self.tf_buffer = Buffer()
         self.tf_listener = TransformListener(self.tf_buffer, self)
@@ -73,16 +80,15 @@ class InspectionLogger(Node):
 
     def detection_cb(self, msg: ArucoDetection):
         now = time.time()
-        source_frame = msg.header.frame_id
 
         try:
             transform = self.tf_buffer.lookup_transform(
-                self.target_frame, source_frame, msg.header.stamp,
-                timeout=Duration(seconds=0.2)
+                self.target_frame, self.camera_frame, msg.header.stamp,
+                timeout=Duration(seconds=0.5)
             )
         except (LookupException, ExtrapolationException) as e:
             self.get_logger().warn(
-                f'Could not transform {source_frame} -> {self.target_frame}: {e}. '
+                f'Could not transform {self.camera_frame} -> {self.target_frame}: {e}. '
                 'Skipping this detection rather than logging a meaningless camera-relative pose.'
             )
             return
@@ -115,11 +121,6 @@ class InspectionLogger(Node):
                 rec['num_observations'] += 1
                 rec['last_updated_sec'] = now
 
-                # Now that positions are in a fixed world frame, repeated
-                # observations of the same physical marker SHOULD converge
-                # to nearly the same position -- a large `dist` here is a
-                # meaningful signal (bad detection, or TF issue), not just
-                # "robot moved," unlike the camera-frame version would give.
                 if dist > self.reinspect_thresh:
                     self.get_logger().warn(
                         f'Marker {mid} re-observed {dist:.3f}m from previous estimate -- '

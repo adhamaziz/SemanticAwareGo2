@@ -144,7 +144,7 @@
          To put it on a different face: change pose X/Y and add yaw. -->
     <model name="aruco_marker_0">
       <static>true</static>
-      <pose>6.497 0 0.5 0 0 0</pose>
+      <pose>8 -5.15 0.35 0 0 0</pose>
       <link name="link">
         <visual name="visual">
           <geometry>
@@ -473,7 +473,7 @@
          (0.1) minus half plaque thickness (0.0025) ~= flush on the surface. -->
     <model name="aruco_marker_1">
       <static>true</static>
-      <pose>-7.503 4 0.8 0 0 0</pose>
+      <pose>-8 -5.85 0.35 0 0 0</pose>
       <link name="link">
         <visual name="visual">
           <geometry><box><size>0.005 0.15 0.15</size></box></geometry>
@@ -497,7 +497,7 @@
          Pose X = +3.436 (mirrored to the other side of the wall). -->
     <model name="aruco_marker_2">
       <static>true</static>
-      <pose>-0.503 -4 0.5 0 0 0</pose>
+      <pose>-2 -4.85 0.15 0 0 0</pose>
       <link name="link">
         <visual name="visual">
           <geometry><box><size>0.005 0.15 0.15</size></box></geometry>
