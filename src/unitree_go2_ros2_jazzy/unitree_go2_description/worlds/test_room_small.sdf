@@ -1,0 +1,217 @@
+<?xml version="1.0" ?>
+<!-- Small isolated test room: 5x5m, two fire extinguishers.
+     One (extinguisher_A) has ArUco marker_0 mounted with an EXPLICIT yaw
+     computed to face the room's open center; last test's failure was
+     almost certainly a marker facing the wrong way by default (all
+     previous markers used yaw=0, which points along world +/-X
+     regardless of where the object actually sits in the room). This
+     time the yaw is deliberately computed, not left to chance.
+     The other (extinguisher_B) has NO marker; this is the "should
+     search, time out gracefully, and resume exploring" test case. -->
+<sdf version="1.8">
+  <world name="default">
+    <physics name="1ms" type="bullet-featherstone">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+
+    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics"/>
+    <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands"/>
+    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster"/>
+
+    <light type="directional" name="sun">
+      <cast_shadows>false</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry><plane><normal>0 0 1</normal><size>20 20</size></plane></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><plane><normal>0 0 1</normal><size>20 20</size></plane></geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ==============================================================
+         WALLS: 5m x 5m room, robot spawns at center (0,0).
+         ============================================================== -->
+    <model name="wall_north">
+      <static>true</static>
+      <pose>0 2.5 1.25 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>5.2 0.2 2.5</size></box></geometry></collision>
+        <visual name="visual">
+          <geometry><box><size>5.2 0.2 2.5</size></box></geometry>
+          <material>
+            <ambient>0.75 0.73 0.68 1</ambient>
+            <diffuse>0.75 0.73 0.68 1</diffuse>
+            <specular>0.3 0.3 0.3 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="wall_south">
+      <static>true</static>
+      <pose>0 -2.5 1.25 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>5.2 0.2 2.5</size></box></geometry></collision>
+        <visual name="visual">
+          <geometry><box><size>5.2 0.2 2.5</size></box></geometry>
+          <material>
+            <ambient>0.75 0.73 0.68 1</ambient>
+            <diffuse>0.75 0.73 0.68 1</diffuse>
+            <specular>0.3 0.3 0.3 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="wall_east">
+      <static>true</static>
+      <pose>2.5 0 1.25 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>0.2 5 2.5</size></box></geometry></collision>
+        <visual name="visual">
+          <geometry><box><size>0.2 5 2.5</size></box></geometry>
+          <material>
+            <ambient>0.75 0.73 0.68 1</ambient>
+            <diffuse>0.75 0.73 0.68 1</diffuse>
+            <specular>0.3 0.3 0.3 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="wall_west">
+      <static>true</static>
+      <pose>-2.5 0 1.25 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>0.2 5 2.5</size></box></geometry></collision>
+        <visual name="visual">
+          <geometry><box><size>0.2 5 2.5</size></box></geometry>
+          <material>
+            <ambient>0.75 0.73 0.68 1</ambient>
+            <diffuse>0.75 0.73 0.68 1</diffuse>
+            <specular>0.3 0.3 0.3 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ==============================================================
+         EXTINGUISHER A: marked, at (1.5, 1.0). Robot spawns at (0,0),
+         so this is roughly 1.8m away; clear line of approach, ~1m
+         clearance from the nearest walls for the NBV rotate-search.
+         ============================================================== -->
+    <model name="fire_extinguisher_A">
+      <static>true</static>
+      <pose>1.5 1.0 0 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><cylinder><radius>0.15</radius><length>0.6</length></cylinder></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/10285_Fire Extinguisher_v3_iterations-2.obj</uri>
+              <scale>0.01 0.01 0.01</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <pbr>
+              <metal>
+                <albedo_map>meshes/10285_Fire_Extinguisher_v2_difuse.jpg</albedo_map>
+                <roughness>0.6</roughness>
+                <metalness>0.1</metalness>
+              </metal>
+            </pbr>
+            <ambient>0.8 0.1 0.1 1</ambient>
+            <diffuse>0.8 0.1 0.1 1</diffuse>
+            <specular>0.9 0.9 0.9 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ArUco marker_0: mounted 0.2m off extinguisher_A, offset AND
+         yaw both computed along the same direction (toward the room's
+         open center at the origin); this is the fix for last test's
+         likely failure mode: a marker whose printed face pointed away
+         from where the robot actually stands to look at it. -->
+    <model name="aruco_marker_0">
+      <static>true</static>
+      <pose>1.334 0.889 0.3 0 0 -2.5536</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>0.005 0.15 0.15</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>textures/marker_0.png</albedo_map>
+                <metalness>0.0</metalness>
+                <roughness>1.0</roughness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ==============================================================
+         EXTINGUISHER B: NO marker. Tests the "approach, search, find
+         nothing, give up gracefully, resume exploring" path.
+         Mirrored position on the opposite side of the room.
+         ============================================================== -->
+    <model name="fire_extinguisher_B">
+      <static>true</static>
+      <pose>-1.5 -1.0 0 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><cylinder><radius>0.15</radius><length>0.6</length></cylinder></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/10285_Fire Extinguisher_v3_iterations-2.obj</uri>
+              <scale>0.01 0.01 0.01</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <pbr>
+              <metal>
+                <albedo_map>meshes/10285_Fire_Extinguisher_v2_difuse.jpg</albedo_map>
+                <roughness>0.6</roughness>
+                <metalness>0.1</metalness>
+              </metal>
+            </pbr>
+            <ambient>0.8 0.1 0.1 1</ambient>
+            <diffuse>0.8 0.1 0.1 1</diffuse>
+            <specular>0.9 0.9 0.9 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+  </world>
+</sdf>
