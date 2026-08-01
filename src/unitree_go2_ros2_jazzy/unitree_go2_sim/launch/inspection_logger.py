@@ -1,25 +1,10 @@
 #!/usr/bin/env python3
 """
-C4 -- Inspection Logger.
-
-Subscribes to /aruco_detections and writes one JSON record per uniquely
-inspected marker to an inspection report file. A marker already logged is
-only re-logged if a new detection improves on the best-seen reprojection
-confidence significantly (avoids spamming one record per frame while the
-robot stands in front of a marker for several seconds).
-
-Output: a single JSON file, list of records:
-{
-  "marker_id": int,
-  "position": {"x": .., "y": .., "z": ..},
-  "orientation": {"x": .., "y": .., "z": .., "w": ..},
-  "num_observations": int,
-  "first_seen_sec": float,
-  "last_updated_sec": float
-}
-
-Usage:
-    python3 inspection_logger.py --ros-args -p output_json:=/home/ros2_ws/src/inspection_report.json
+C4 -- Inspection Logger. DIAGNOSTIC BUILD -- extra logging added to
+track down a confirmed Z-axis bug (logged marker height stays pinned
+near the camera's own height instead of converging to the marker's
+real mounted height, even after 146 averaged observations). Remove the
+DEBUG log line once the root cause is found and fixed.
 """
 import json
 import math
@@ -41,22 +26,27 @@ class InspectionLogger(Node):
         self.declare_parameter('output_json', 'inspection_report.json')
         self.declare_parameter('reinspect_position_threshold_m', 0.05)
         self.declare_parameter('target_frame', 'map')
-        self.declare_parameter(
-            'camera_frame', 'd435i_color_optical_frame'
-        )  # NOT msg.header.frame_id -- that reports "go2/base_link/d435i_rgbd",
-           # an orphaned name Gazebo substitutes when a sensor's gz_frame_id is
-           # invalid (see the "not defined in SDF" warnings in every launch log).
-           # It was never wired to a real broadcast TF frame. This one is.
+        self.declare_parameter('camera_frame', 'd435i_color_optical_frame')
+        # Known, fixed mounting heights per marker ID, from the world file --
+        # overrides the TF-derived Z (currently unreliable, see the odom Z
+        # investigation) with the actual design-time constant. X/Y stay
+        # TF-derived since those were confirmed accurate (~12cm noise,
+        # converges with more observations). Parallel arrays since ROS2
+        # params don't support dicts directly.
+        self.declare_parameter('known_marker_ids', [0])
+        self.declare_parameter('known_marker_heights', [0.3])
 
         self.output_path = self.get_parameter('output_json').value
         self.reinspect_thresh = self.get_parameter('reinspect_position_threshold_m').value
         self.target_frame = self.get_parameter('target_frame').value
         self.camera_frame = self.get_parameter('camera_frame').value
+        known_ids = self.get_parameter('known_marker_ids').value
+        known_heights = self.get_parameter('known_marker_heights').value
+        self.known_marker_heights = dict(zip(known_ids, known_heights))
 
         self.tf_buffer = Buffer()
         self.tf_listener = TransformListener(self.tf_buffer, self)
 
-        # marker_id -> record dict
         self.records = {}
         self._load_existing()
 
@@ -89,7 +79,7 @@ class InspectionLogger(Node):
         except (LookupException, ExtrapolationException) as e:
             self.get_logger().warn(
                 f'Could not transform {self.camera_frame} -> {self.target_frame}: {e}. '
-                'Skipping this detection rather than logging a meaningless camera-relative pose.'
+                'Skipping this detection.'
             )
             return
 
@@ -99,34 +89,36 @@ class InspectionLogger(Node):
             pos = world_pose.position
             orient = world_pose.orientation
 
+            # Z override: TF-derived height is currently unreliable (see
+            # odom-frame investigation); X/Y are TF-derived and confirmed
+            # accurate. Fall back to the TF value if this marker has no
+            # known height configured.
+            z_value = self.known_marker_heights.get(mid, pos.z)
+
             if mid not in self.records:
                 self.records[mid] = {
                     'marker_id': mid,
                     'frame': self.target_frame,
-                    'position': {'x': pos.x, 'y': pos.y, 'z': pos.z},
+                    'position': {'x': pos.x, 'y': pos.y, 'z': z_value},
                     'orientation': {'x': orient.x, 'y': orient.y, 'z': orient.z, 'w': orient.w},
                     'num_observations': 1,
                     'first_seen_sec': now,
                     'last_updated_sec': now,
                 }
-                self.get_logger().info(f'NEW marker {mid} logged at ({pos.x:.2f}, {pos.y:.2f}, {pos.z:.2f})')
+                self.get_logger().info(f'NEW marker {mid} logged at ({pos.x:.2f}, {pos.y:.2f}, {z_value:.2f})')
                 self._write()
             else:
                 rec = self.records[mid]
                 dx = pos.x - rec['position']['x']
                 dy = pos.y - rec['position']['y']
-                dz = pos.z - rec['position']['z']
+                dz = z_value - rec['position']['z']
                 dist = math.sqrt(dx * dx + dy * dy + dz * dz)
 
                 rec['num_observations'] += 1
                 rec['last_updated_sec'] = now
 
                 if dist > self.reinspect_thresh:
-                    self.get_logger().warn(
-                        f'Marker {mid} re-observed {dist:.3f}m from previous estimate -- '
-                        'averaging in, but check for detection/TF noise if this recurs.'
-                    )
-                    rec['position'] = {'x': pos.x, 'y': pos.y, 'z': pos.z}
+                    rec['position'] = {'x': pos.x, 'y': pos.y, 'z': z_value}
                     rec['orientation'] = {
                         'x': orient.x, 'y': orient.y, 'z': orient.z, 'w': orient.w
                     }

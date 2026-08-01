@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
+cmake_policy(SET CMP0009 NEW)
 project(unitree_go2_sim)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")

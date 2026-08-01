@@ -1,0 +1,2318 @@
+[
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 29.715767590345738,
+    "reading_percent": 77.35602007753765,
+    "stamp_sec": 1785623467.7888803
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 30.108659135806796,
+    "reading_percent": 77.56321143403653,
+    "stamp_sec": 1785623467.8595715
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 33.616137528927844,
+    "reading_percent": 77.77040279053543,
+    "stamp_sec": 1785623467.9366188
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 27.181111085477223,
+    "reading_percent": 77.56321143403653,
+    "stamp_sec": 1785623467.9984457
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 28.967660646064036,
+    "reading_percent": 77.35602007753765,
+    "stamp_sec": 1785623468.0859134
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 43.54978370906657,
+    "reading_percent": 77.77040279053543,
+    "stamp_sec": 1785623468.1485171
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 30.108659135806796,
+    "reading_percent": 77.77040279053543,
+    "stamp_sec": 1785623468.2211158
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 38.07278187399084,
+    "reading_percent": 77.77040279053543,
+    "stamp_sec": 1785623468.298287
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 30.22544972495341,
+    "reading_percent": 77.89358182490837,
+    "stamp_sec": 1785623468.369403
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 25.76932762433873,
+    "reading_percent": 77.89358182490837,
+    "stamp_sec": 1785623468.4313622
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 26.003345844511454,
+    "reading_percent": 77.77040279053543,
+    "stamp_sec": 1785623468.515792
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 40.213000879049986,
+    "reading_percent": 77.89358182490837,
+    "stamp_sec": 1785623468.5708177
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 36.42228347498348,
+    "reading_percent": 77.89358182490837,
+    "stamp_sec": 1785623468.6423
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 34.21570213243741,
+    "reading_percent": 82.10210103908173,
+    "stamp_sec": 1785623468.7094915
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 40.846146913048806,
+    "reading_percent": 84.42938238106507,
+    "stamp_sec": 1785623468.7908833
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 43.60281897270362,
+    "reading_percent": 88.42745202713402,
+    "stamp_sec": 1785623468.873937
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 37.170923489940385,
+    "reading_percent": 85.21897300484012,
+    "stamp_sec": 1785623468.9303977
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 35.64702074990675,
+    "reading_percent": 85.21897300484012,
+    "stamp_sec": 1785623469.0185666
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 38.45370921670596,
+    "reading_percent": 86.57192711085978,
+    "stamp_sec": 1785623469.0882819
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 25.98437059118528,
+    "reading_percent": 85.21897300484012,
+    "stamp_sec": 1785623469.1559606
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 30.352624727636996,
+    "reading_percent": 83.61171278492665,
+    "stamp_sec": 1785623469.2302387
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 43.80151834988151,
+    "reading_percent": 83.61171278492665,
+    "stamp_sec": 1785623469.2930455
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 38.91530613473125,
+    "reading_percent": 86.57192711085978,
+    "stamp_sec": 1785623469.3677025
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 40.91438322002513,
+    "reading_percent": 87.05877338030106,
+    "stamp_sec": 1785623469.447615
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 31.263731694377434,
+    "reading_percent": 87.05877338030106,
+    "stamp_sec": 1785623469.5134823
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 37.27817419986904,
+    "reading_percent": 87.05877338030106,
+    "stamp_sec": 1785623469.5839603
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 33.40782458970894,
+    "reading_percent": 85.33209032860188,
+    "stamp_sec": 1785623469.6529171
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 33.24105023326146,
+    "reading_percent": 81.25003259476603,
+    "stamp_sec": 1785623469.7293887
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 30.902214365071746,
+    "reading_percent": 81.07413568102086,
+    "stamp_sec": 1785623469.8030002
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 29.427456403189737,
+    "reading_percent": 81.07413568102086,
+    "stamp_sec": 1785623469.8705704
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 31.644659037092563,
+    "reading_percent": 79.39042188642154,
+    "stamp_sec": 1785623469.948756
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 25.36216694893116,
+    "reading_percent": 78.60736549084118,
+    "stamp_sec": 1785623470.0203965
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 24.251328679253778,
+    "reading_percent": 77.05193826844422,
+    "stamp_sec": 1785623470.0832958
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 25.309766851626264,
+    "reading_percent": 72.7642774810377,
+    "stamp_sec": 1785623470.1569254
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 43.75075732130277,
+    "reading_percent": 72.7642774810377,
+    "stamp_sec": 1785623470.2207377
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 25.523424501068014,
+    "reading_percent": 72.7642774810377,
+    "stamp_sec": 1785623470.2870605
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 34.029493528626936,
+    "reading_percent": 72.93435582127643,
+    "stamp_sec": 1785623470.371526
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 19.925580658184334,
+    "reading_percent": 72.93435582127643,
+    "stamp_sec": 1785623470.4488475
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 26.2926485725653,
+    "reading_percent": 73.74565644948463,
+    "stamp_sec": 1785623470.5104597
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 18.434948822922017,
+    "reading_percent": 72.93435582127643,
+    "stamp_sec": 1785623470.5909345
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 17.949402992913882,
+    "reading_percent": 67.03030992018702,
+    "stamp_sec": 1785623470.6631866
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 27.537571311213924,
+    "reading_percent": 67.03030992018702,
+    "stamp_sec": 1785623470.7248032
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 30.355687362844332,
+    "reading_percent": 73.74565644948463,
+    "stamp_sec": 1785623470.8027036
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 29.073383442722292,
+    "reading_percent": 75.05867646193732,
+    "stamp_sec": 1785623470.8708112
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 36.317476118731776,
+    "reading_percent": 76.6784975170392,
+    "stamp_sec": 1785623470.9353445
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 28.217355854729306,
+    "reading_percent": 76.6784975170392,
+    "stamp_sec": 1785623471.0115004
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 27.26588202734039,
+    "reading_percent": 76.6784975170392,
+    "stamp_sec": 1785623471.0826187
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 36.25383773744479,
+    "reading_percent": 76.6784975170392,
+    "stamp_sec": 1785623471.144115
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 21.258909112164385,
+    "reading_percent": 75.775645219983,
+    "stamp_sec": 1785623471.2190843
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 20.317696151727247,
+    "reading_percent": 74.77212577423592,
+    "stamp_sec": 1785623471.293416
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 24.680558480200556,
+    "reading_percent": 72.04538502906753,
+    "stamp_sec": 1785623471.365669
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 23.179108780460492,
+    "reading_percent": 70.46180603075169,
+    "stamp_sec": 1785623471.4557016
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 25.49949761539516,
+    "reading_percent": 70.46180603075169,
+    "stamp_sec": 1785623471.5207355
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 12.044149894960027,
+    "reading_percent": 70.46180603075169,
+    "stamp_sec": 1785623471.5916405
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 13.54544401621897,
+    "reading_percent": 70.46180603075169,
+    "stamp_sec": 1785623471.6792235
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 5.562567856659531,
+    "reading_percent": 60.30117980390615,
+    "stamp_sec": 1785623471.7442148
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 14.835547671194671,
+    "reading_percent": 60.30117980390615,
+    "stamp_sec": 1785623471.8187468
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 19.580017864801153,
+    "reading_percent": 60.30117980390615,
+    "stamp_sec": 1785623471.9042723
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 15.642246457208731,
+    "reading_percent": 61.66185212880902,
+    "stamp_sec": 1785623471.9699585
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 13.09189306434684,
+    "reading_percent": 61.66185212880902,
+    "stamp_sec": 1785623472.0370922
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 6.876446196842214,
+    "reading_percent": 61.66185212880902,
+    "stamp_sec": 1785623472.1074708
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 8.11979179470042,
+    "reading_percent": 59.82281961496661,
+    "stamp_sec": 1785623472.1749213
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 3.6577666389743797,
+    "reading_percent": 54.57874440587054,
+    "stamp_sec": 1785623472.2413738
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 2.882022588794077,
+    "reading_percent": 53.267387803809484,
+    "stamp_sec": 1785623472.3081505
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 2.4606740033191508,
+    "reading_percent": 49.87264647412628,
+    "stamp_sec": 1785623472.3941681
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 13.4861970965518,
+    "reading_percent": 49.87264647412628,
+    "stamp_sec": 1785623472.4682343
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 13.322994440381756,
+    "reading_percent": 49.87264647412628,
+    "stamp_sec": 1785623472.5344477
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 0.8042644731506262,
+    "reading_percent": 49.05446922440112,
+    "stamp_sec": 1785623472.6182344
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -2.0077014989291544,
+    "reading_percent": 48.61007287130071,
+    "stamp_sec": 1785623472.6849709
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -10.226143524429558,
+    "reading_percent": 46.863057739831966,
+    "stamp_sec": 1785623472.753195
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -10.723168665344895,
+    "reading_percent": 43.89727722907942,
+    "stamp_sec": 1785623472.8303666
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 12.427350382058574,
+    "reading_percent": 43.89727722907942,
+    "stamp_sec": 1785623472.9002886
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 7.503284045209716,
+    "reading_percent": 43.89727722907942,
+    "stamp_sec": 1785623472.9722853
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -1.3590054554210242,
+    "reading_percent": 44.58145694616745,
+    "stamp_sec": 1785623473.0420995
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 3.581963565696102,
+    "reading_percent": 49.79269697273968,
+    "stamp_sec": 1785623473.117259
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 2.1101375138967917,
+    "reading_percent": 49.79269697273968,
+    "stamp_sec": 1785623473.187333
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 3.1896544989711613,
+    "reading_percent": 49.37892860006488,
+    "stamp_sec": 1785623473.2598526
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 3.9192308978584682,
+    "reading_percent": 49.37892860006488,
+    "stamp_sec": 1785623473.3311398
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 4.658744928877328,
+    "reading_percent": 49.79269697273968,
+    "stamp_sec": 1785623473.402417
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -1.863822723354511,
+    "reading_percent": 49.37892860006488,
+    "stamp_sec": 1785623473.4747393
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 0.5434783630683397,
+    "reading_percent": 49.37892860006488,
+    "stamp_sec": 1785623473.5464728
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": 7.156636533060903,
+    "reading_percent": 50.14841282797133,
+    "stamp_sec": 1785623473.6121845
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -3.7683012862088296,
+    "reading_percent": 46.58800662952818,
+    "stamp_sec": 1785623473.678903
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -0.36824757654239676,
+    "reading_percent": 45.626409281020734,
+    "stamp_sec": 1785623473.754231
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -2.481420670330946,
+    "reading_percent": 45.626409281020734,
+    "stamp_sec": 1785623473.829656
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -10.468376616293522,
+    "reading_percent": 43.39764561900195,
+    "stamp_sec": 1785623473.8946276
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -7.532466154879318,
+    "reading_percent": 42.040372633435545,
+    "stamp_sec": 1785623473.9687474
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -0.018358147245231344,
+    "reading_percent": 43.39764561900195,
+    "stamp_sec": 1785623474.0395145
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -9.976303372554797,
+    "reading_percent": 38.070307946448786,
+    "stamp_sec": 1785623474.1103659
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -3.735716020668279,
+    "reading_percent": 38.070307946448786,
+    "stamp_sec": 1785623474.1926243
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -11.095526088642522,
+    "reading_percent": 38.070307946448786,
+    "stamp_sec": 1785623474.261497
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -4.207897250771404,
+    "reading_percent": 41.5767307696114,
+    "stamp_sec": 1785623474.3276362
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -9.220182451092592,
+    "reading_percent": 36.290273568832646,
+    "stamp_sec": 1785623474.4060018
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -5.011508741323622,
+    "reading_percent": 40.72916173052597,
+    "stamp_sec": 1785623474.4834921
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -5.477156872977236,
+    "reading_percent": 40.23804264607091,
+    "stamp_sec": 1785623474.5484972
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -7.049428293132699,
+    "reading_percent": 40.23804264607091,
+    "stamp_sec": 1785623474.6246016
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -7.545217884747282,
+    "reading_percent": 38.57976797923294,
+    "stamp_sec": 1785623474.6972742
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -9.085114725509154,
+    "reading_percent": 38.57976797923294,
+    "stamp_sec": 1785623474.7632618
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -5.314545669944747,
+    "reading_percent": 38.57976797923294,
+    "stamp_sec": 1785623474.8435316
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -6.098519872438816,
+    "reading_percent": 38.57976797923294,
+    "stamp_sec": 1785623474.9217262
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -5.452266009928833,
+    "reading_percent": 39.58269109053878,
+    "stamp_sec": 1785623474.986427
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -2.0407602469617623,
+    "reading_percent": 40.26429503932806,
+    "stamp_sec": 1785623475.0679607
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -1.7379538638266596,
+    "reading_percent": 40.40954868190928,
+    "stamp_sec": 1785623475.1422503
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -7.604786368682535,
+    "reading_percent": 40.26429503932806,
+    "stamp_sec": 1785623475.2022455
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -4.524316711350974,
+    "reading_percent": 41.24300316453813,
+    "stamp_sec": 1785623475.2862139
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -6.602369458022781,
+    "reading_percent": 41.24300316453813,
+    "stamp_sec": 1785623475.3585339
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -5.405273233424024,
+    "reading_percent": 40.31385832070768,
+    "stamp_sec": 1785623475.4240284
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -4.524316711350974,
+    "reading_percent": 40.31385832070768,
+    "stamp_sec": 1785623475.5128481
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -5.17896142401003,
+    "reading_percent": 40.55254938609662,
+    "stamp_sec": 1785623475.581882
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -4.9163990047930834,
+    "reading_percent": 40.55254938609662,
+    "stamp_sec": 1785623475.6539261
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -4.9163990047930834,
+    "reading_percent": 40.82947396964474,
+    "stamp_sec": 1785623475.7265348
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -8.587373659513514,
+    "reading_percent": 40.82947396964474,
+    "stamp_sec": 1785623475.791136
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -8.198068846016293,
+    "reading_percent": 40.55254938609662,
+    "stamp_sec": 1785623475.854269
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -8.587373659513514,
+    "reading_percent": 37.36829678810662,
+    "stamp_sec": 1785623475.9190407
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -10.834198138944311,
+    "reading_percent": 36.9576970013111,
+    "stamp_sec": 1785623476.0078306
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -2.3700347234413557,
+    "reading_percent": 36.9576970013111,
+    "stamp_sec": 1785623476.0756907
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -10.077929356307637,
+    "reading_percent": 36.9576970013111,
+    "stamp_sec": 1785623476.1443894
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -12.28591608099667,
+    "reading_percent": 35.38560790790234,
+    "stamp_sec": 1785623476.2172823
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -12.136360610116979,
+    "reading_percent": 34.58797122285544,
+    "stamp_sec": 1785623476.2906287
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.958417732171995,
+    "reading_percent": 33.21458046450962,
+    "stamp_sec": 1785623476.357426
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -12.72299822286783,
+    "reading_percent": 33.05684430937281,
+    "stamp_sec": 1785623476.4337304
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -11.44415700478197,
+    "reading_percent": 33.05684430937281,
+    "stamp_sec": 1785623476.5137436
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -14.26985969806981,
+    "reading_percent": 32.5958537743413,
+    "stamp_sec": 1785623476.5829234
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -22.237286406885616,
+    "reading_percent": 30.964378976445772,
+    "stamp_sec": 1785623476.655139
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.941104078055602,
+    "reading_percent": 30.964378976445772,
+    "stamp_sec": 1785623476.7362268
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -24.58874613670349,
+    "reading_percent": 27.09231752887476,
+    "stamp_sec": 1785623476.8016376
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -23.97030055590632,
+    "reading_percent": 22.561134026657744,
+    "stamp_sec": 1785623476.8775375
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -13.281891273546798,
+    "reading_percent": 22.561134026657744,
+    "stamp_sec": 1785623476.9520376
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -20.120765311852075,
+    "reading_percent": 24.79342882558962,
+    "stamp_sec": 1785623477.0209484
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -14.10069313648383,
+    "reading_percent": 24.79342882558962,
+    "stamp_sec": 1785623477.0901978
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -22.80212264056662,
+    "reading_percent": 24.79342882558962,
+    "stamp_sec": 1785623477.1589038
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.357337262137463,
+    "reading_percent": 27.70801638962362,
+    "stamp_sec": 1785623477.2310097
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.2281162687846,
+    "reading_percent": 26.789605771312885,
+    "stamp_sec": 1785623477.296313
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.279360918563075,
+    "reading_percent": 26.789605771312885,
+    "stamp_sec": 1785623477.376744
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -12.906359931868295,
+    "reading_percent": 26.789605771312885,
+    "stamp_sec": 1785623477.4521143
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -23.06836156300911,
+    "reading_percent": 26.789605771312885,
+    "stamp_sec": 1785623477.5164967
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.766299870536155,
+    "reading_percent": 26.789605771312885,
+    "stamp_sec": 1785623477.5922053
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.439313125416877,
+    "reading_percent": 27.27668352654552,
+    "stamp_sec": 1785623477.672996
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.016973558809898,
+    "reading_percent": 27.27668352654552,
+    "stamp_sec": 1785623477.735465
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.301589333424346,
+    "reading_percent": 27.0122979875232,
+    "stamp_sec": 1785623477.8105125
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.845349024952366,
+    "reading_percent": 27.0122979875232,
+    "stamp_sec": 1785623477.8802571
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.77595517697051,
+    "reading_percent": 26.211800074849204,
+    "stamp_sec": 1785623477.951076
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -21.169629651856543,
+    "reading_percent": 26.13861038338274,
+    "stamp_sec": 1785623478.0264814
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -21.865096050534895,
+    "reading_percent": 25.657413730037344,
+    "stamp_sec": 1785623478.105635
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.927652226406654,
+    "reading_percent": 26.051805196808903,
+    "stamp_sec": 1785623478.174956
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -21.120167088559537,
+    "reading_percent": 23.739359771696257,
+    "stamp_sec": 1785623478.2531724
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -21.318128088934944,
+    "reading_percent": 23.687191606186907,
+    "stamp_sec": 1785623478.3204582
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -22.142268275363463,
+    "reading_percent": 23.530570304600317,
+    "stamp_sec": 1785623478.3850589
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -21.84809525223917,
+    "reading_percent": 23.530570304600317,
+    "stamp_sec": 1785623478.4647355
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -21.240241080538475,
+    "reading_percent": 23.530570304600317,
+    "stamp_sec": 1785623478.538641
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -21.240241080538475,
+    "reading_percent": 23.530570304600317,
+    "stamp_sec": 1785623478.6072755
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -22.047947463560373,
+    "reading_percent": 22.97161393746335,
+    "stamp_sec": 1785623478.6918943
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -22.082346364006707,
+    "reading_percent": 22.97161393746335,
+    "stamp_sec": 1785623478.7650506
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.752081200778164,
+    "reading_percent": 23.61271773235607,
+    "stamp_sec": 1785623478.8216004
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.556877539587862,
+    "reading_percent": 23.61271773235607,
+    "stamp_sec": 1785623478.9025114
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -20.01680942821423,
+    "reading_percent": 24.90307109606245,
+    "stamp_sec": 1785623478.9852335
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.36205149518113,
+    "reading_percent": 26.442861258996682,
+    "stamp_sec": 1785623479.0508904
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -21.498264844763344,
+    "reading_percent": 26.442861258996682,
+    "stamp_sec": 1785623479.129301
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -21.285695116319076,
+    "reading_percent": 24.90307109606245,
+    "stamp_sec": 1785623479.203987
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -22.096255827409554,
+    "reading_percent": 23.564777360818272,
+    "stamp_sec": 1785623479.277496
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -21.936783854492862,
+    "reading_percent": 23.340580068228103,
+    "stamp_sec": 1785623479.3466065
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -21.520273601993896,
+    "reading_percent": 23.31736743197704,
+    "stamp_sec": 1785623479.4088416
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -21.84964562792108,
+    "reading_percent": 22.969978756231637,
+    "stamp_sec": 1785623479.4729774
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -21.990373856641522,
+    "reading_percent": 22.87807406866638,
+    "stamp_sec": 1785623479.543653
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -21.84809525223917,
+    "reading_percent": 22.969978756231637,
+    "stamp_sec": 1785623479.6283407
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -22.047947463560373,
+    "reading_percent": 22.969978756231637,
+    "stamp_sec": 1785623479.6954606
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -21.53532639900543,
+    "reading_percent": 22.969978756231637,
+    "stamp_sec": 1785623479.761298
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -21.835110795410145,
+    "reading_percent": 22.97161393746335,
+    "stamp_sec": 1785623479.8441403
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -21.60760805950749,
+    "reading_percent": 22.98530864408092,
+    "stamp_sec": 1785623479.9161415
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -20.85551032299048,
+    "reading_percent": 23.22525577963745,
+    "stamp_sec": 1785623479.9840286
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -20.996538548998096,
+    "reading_percent": 23.301491246968975,
+    "stamp_sec": 1785623480.0587902
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -21.98651841814091,
+    "reading_percent": 23.22525577963745,
+    "stamp_sec": 1785623480.133643
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -21.84964562792108,
+    "reading_percent": 23.22525577963745,
+    "stamp_sec": 1785623480.2026207
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -21.897296079218684,
+    "reading_percent": 22.969978756231637,
+    "stamp_sec": 1785623480.2754266
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -21.936783854492862,
+    "reading_percent": 22.919721825248057,
+    "stamp_sec": 1785623480.351518
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.931231792381276,
+    "reading_percent": 22.919721825248057,
+    "stamp_sec": 1785623480.4265137
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.434907882257075,
+    "reading_percent": 22.969978756231637,
+    "stamp_sec": 1785623480.503072
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -21.505494149792057,
+    "reading_percent": 23.33295532021432,
+    "stamp_sec": 1785623480.5740137
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -21.949223823010936,
+    "reading_percent": 23.33295532021432,
+    "stamp_sec": 1785623480.6544688
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.879597668865735,
+    "reading_percent": 25.516802656583465,
+    "stamp_sec": 1785623480.7251213
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.448824505873784,
+    "reading_percent": 25.516802656583465,
+    "stamp_sec": 1785623480.7893956
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.698998360243646,
+    "reading_percent": 26.556824793654922,
+    "stamp_sec": 1785623480.8719995
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.667102250649297,
+    "reading_percent": 26.556824793654922,
+    "stamp_sec": 1785623480.9377062
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.45832531265434,
+    "reading_percent": 26.556824793654922,
+    "stamp_sec": 1785623481.013122
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -20.428168358351375,
+    "reading_percent": 26.54680429274347,
+    "stamp_sec": 1785623481.083371
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -21.543862728094968,
+    "reading_percent": 26.326607256240187,
+    "stamp_sec": 1785623481.1536958
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.61483597652443,
+    "reading_percent": 25.32703249555969,
+    "stamp_sec": 1785623481.2268403
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.68640494669433,
+    "reading_percent": 25.25154870272149,
+    "stamp_sec": 1785623481.2905362
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.672726528743315,
+    "reading_percent": 25.25154870272149,
+    "stamp_sec": 1785623481.3604069
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.483323383557863,
+    "reading_percent": 25.32703249555969,
+    "stamp_sec": 1785623481.441845
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.150293464520743,
+    "reading_percent": 26.520438827361524,
+    "stamp_sec": 1785623481.5122657
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.64481512251082,
+    "reading_percent": 26.871685482969973,
+    "stamp_sec": 1785623481.5762525
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.312685408577657,
+    "reading_percent": 26.871685482969973,
+    "stamp_sec": 1785623481.6511292
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -20.31431883332952,
+    "reading_percent": 26.700410699573148,
+    "stamp_sec": 1785623481.7189524
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.626708355092564,
+    "reading_percent": 26.700410699573148,
+    "stamp_sec": 1785623481.7920341
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.44164006672431,
+    "reading_percent": 26.369210697883876,
+    "stamp_sec": 1785623481.8662188
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.290046219188728,
+    "reading_percent": 25.66958825262165,
+    "stamp_sec": 1785623481.926388
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.59021233619556,
+    "reading_percent": 25.509702221625872,
+    "stamp_sec": 1785623482.0010576
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.59021233619556,
+    "reading_percent": 25.509702221625872,
+    "stamp_sec": 1785623482.084713
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.516906399359986,
+    "reading_percent": 25.430318820595026,
+    "stamp_sec": 1785623482.1525974
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.3462576438057,
+    "reading_percent": 25.430318820595026,
+    "stamp_sec": 1785623482.2220194
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.207648509518705,
+    "reading_percent": 25.430318820595026,
+    "stamp_sec": 1785623482.2994816
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.549074553876952,
+    "reading_percent": 25.430318820595026,
+    "stamp_sec": 1785623482.37061
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.794531274655625,
+    "reading_percent": 25.61030206307813,
+    "stamp_sec": 1785623482.4386322
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.364417764603733,
+    "reading_percent": 25.61030206307813,
+    "stamp_sec": 1785623482.5286064
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.496557496346842,
+    "reading_percent": 25.591148583672446,
+    "stamp_sec": 1785623482.5920026
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.477184859365433,
+    "reading_percent": 25.472213128827278,
+    "stamp_sec": 1785623482.6677692
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.196648919531338,
+    "reading_percent": 25.591148583672446,
+    "stamp_sec": 1785623482.7562873
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.403330641214072,
+    "reading_percent": 25.55010717271152,
+    "stamp_sec": 1785623482.8299046
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.204128046117866,
+    "reading_percent": 25.55010717271152,
+    "stamp_sec": 1785623482.8928819
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.796336595040007,
+    "reading_percent": 25.760206149759487,
+    "stamp_sec": 1785623482.9617963
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.61483597652443,
+    "reading_percent": 25.760206149759487,
+    "stamp_sec": 1785623483.0237513
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.294503642492057,
+    "reading_percent": 25.760206149759487,
+    "stamp_sec": 1785623483.0962794
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.204128046117866,
+    "reading_percent": 25.760206149759487,
+    "stamp_sec": 1785623483.172919
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.207679107223054,
+    "reading_percent": 26.190303793211307,
+    "stamp_sec": 1785623483.25356
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.312685408577657,
+    "reading_percent": 26.700410699573148,
+    "stamp_sec": 1785623483.3269038
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.796336595040007,
+    "reading_percent": 26.700410699573148,
+    "stamp_sec": 1785623483.398304
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.300469895976857,
+    "reading_percent": 26.190303793211307,
+    "stamp_sec": 1785623483.4765172
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.305395716319964,
+    "reading_percent": 26.190303793211307,
+    "stamp_sec": 1785623483.5592191
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -20.013475894796183,
+    "reading_percent": 25.65859440071321,
+    "stamp_sec": 1785623483.6259043
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.34763628430651,
+    "reading_percent": 25.65859440071321,
+    "stamp_sec": 1785623483.6965728
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.297739874049594,
+    "reading_percent": 25.65859440071321,
+    "stamp_sec": 1785623483.7737687
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.29622109731008,
+    "reading_percent": 25.661473754839896,
+    "stamp_sec": 1785623483.8509328
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.074288144723457,
+    "reading_percent": 25.66307560866706,
+    "stamp_sec": 1785623483.9260457
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -20.185337225282947,
+    "reading_percent": 25.66307560866706,
+    "stamp_sec": 1785623484.002929
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.05240637684691,
+    "reading_percent": 25.66307560866706,
+    "stamp_sec": 1785623484.0758393
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.519441964297684,
+    "reading_percent": 25.920226994339565,
+    "stamp_sec": 1785623484.1480849
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.204128046117866,
+    "reading_percent": 25.920226994339565,
+    "stamp_sec": 1785623484.2182128
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.14068771778796,
+    "reading_percent": 25.920226994339565,
+    "stamp_sec": 1785623484.2916603
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.15596687393195,
+    "reading_percent": 26.482344560255235,
+    "stamp_sec": 1785623484.3643672
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.170021830902236,
+    "reading_percent": 26.482344560255235,
+    "stamp_sec": 1785623484.430339
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.51091772498668,
+    "reading_percent": 26.49133507545655,
+    "stamp_sec": 1785623484.508834
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.587629187876168,
+    "reading_percent": 26.49133507545655,
+    "stamp_sec": 1785623484.5860164
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.33174903531803,
+    "reading_percent": 26.49133507545655,
+    "stamp_sec": 1785623484.6613474
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -16.92995168398284,
+    "reading_percent": 26.49133507545655,
+    "stamp_sec": 1785623484.7346008
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.662535019487077,
+    "reading_percent": 27.386124314946983,
+    "stamp_sec": 1785623484.805887
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.851830985110052,
+    "reading_percent": 27.386124314946983,
+    "stamp_sec": 1785623484.881216
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.0902393111452,
+    "reading_percent": 27.386124314946983,
+    "stamp_sec": 1785623484.9502802
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.0902393111452,
+    "reading_percent": 26.935024598535158,
+    "stamp_sec": 1785623485.0224109
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.53298066852602,
+    "reading_percent": 26.935024598535158,
+    "stamp_sec": 1785623485.099076
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.894990479334428,
+    "reading_percent": 26.46806528890561,
+    "stamp_sec": 1785623485.1718266
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.03220209818872,
+    "reading_percent": 26.935024598535158,
+    "stamp_sec": 1785623485.2372441
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.07716821481819,
+    "reading_percent": 26.46806528890561,
+    "stamp_sec": 1785623485.31937
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.58821380452673,
+    "reading_percent": 26.46806528890561,
+    "stamp_sec": 1785623485.3900547
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.27261112524867,
+    "reading_percent": 27.46451090036566,
+    "stamp_sec": 1785623485.455306
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -16.903822439277125,
+    "reading_percent": 27.79737704620023,
+    "stamp_sec": 1785623485.5471478
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.07716821481819,
+    "reading_percent": 27.46451090036566,
+    "stamp_sec": 1785623485.6155152
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -16.977175633104892,
+    "reading_percent": 27.79737704620023,
+    "stamp_sec": 1785623485.6810365
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.997703556196445,
+    "reading_percent": 27.79737704620023,
+    "stamp_sec": 1785623485.764625
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.62181937491915,
+    "reading_percent": 27.429067105272775,
+    "stamp_sec": 1785623485.838603
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.07716821481819,
+    "reading_percent": 25.97792205927961,
+    "stamp_sec": 1785623485.905405
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.894990479334428,
+    "reading_percent": 26.08625354144598,
+    "stamp_sec": 1785623485.985969
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.15499340923248,
+    "reading_percent": 26.08625354144598,
+    "stamp_sec": 1785623486.065324
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.483012003554,
+    "reading_percent": 27.429067105272775,
+    "stamp_sec": 1785623486.1314015
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.20602683800275,
+    "reading_percent": 26.08625354144598,
+    "stamp_sec": 1785623486.2125943
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.111590062847768,
+    "reading_percent": 26.08625354144598,
+    "stamp_sec": 1785623486.2855814
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -21.810324619707572,
+    "reading_percent": 25.85780596071446,
+    "stamp_sec": 1785623486.3532603
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.919484133398388,
+    "reading_percent": 25.85780596071446,
+    "stamp_sec": 1785623486.433312
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.85746970973839,
+    "reading_percent": 25.85780596071446,
+    "stamp_sec": 1785623486.5156717
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.982276665878768,
+    "reading_percent": 25.994192800497665,
+    "stamp_sec": 1785623486.5746484
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.982276665878768,
+    "reading_percent": 25.994192800497665,
+    "stamp_sec": 1785623486.6538649
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.113968554076056,
+    "reading_percent": 26.06042008450472,
+    "stamp_sec": 1785623486.7234151
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.765072507278635,
+    "reading_percent": 26.125826697138923,
+    "stamp_sec": 1785623486.792436
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.220828732850467,
+    "reading_percent": 25.994192800497665,
+    "stamp_sec": 1785623486.8719268
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -20.606844903193657,
+    "reading_percent": 25.994192800497665,
+    "stamp_sec": 1785623486.9563243
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.608092814167883,
+    "reading_percent": 26.223278026573226,
+    "stamp_sec": 1785623487.0221467
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.919484133398388,
+    "reading_percent": 26.06042008450472,
+    "stamp_sec": 1785623487.0889077
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.018116600554755,
+    "reading_percent": 26.06042008450472,
+    "stamp_sec": 1785623487.1737313
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.669874671425614,
+    "reading_percent": 26.323683184047407,
+    "stamp_sec": 1785623487.2427661
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.287236143689682,
+    "reading_percent": 26.388844508897137,
+    "stamp_sec": 1785623487.3131814
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.618339450985925,
+    "reading_percent": 26.378037381045147,
+    "stamp_sec": 1785623487.3939414
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.52210956337814,
+    "reading_percent": 26.479531043505077,
+    "stamp_sec": 1785623487.4625828
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.705283213514008,
+    "reading_percent": 26.378037381045147,
+    "stamp_sec": 1785623487.5354478
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.48121635509137,
+    "reading_percent": 26.479531043505077,
+    "stamp_sec": 1785623487.611892
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -20.03502464002032,
+    "reading_percent": 26.378037381045147,
+    "stamp_sec": 1785623487.687115
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.682118345846725,
+    "reading_percent": 26.479531043505077,
+    "stamp_sec": 1785623487.7552357
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -15.963768219796911,
+    "reading_percent": 27.36546978063546,
+    "stamp_sec": 1785623487.8273945
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.662433821584138,
+    "reading_percent": 27.36546978063546,
+    "stamp_sec": 1785623487.9158933
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -16.995784101158574,
+    "reading_percent": 27.36546978063546,
+    "stamp_sec": 1785623488.0044513
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.655852312801223,
+    "reading_percent": 27.393172565688552,
+    "stamp_sec": 1785623488.099303
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.255634163758387,
+    "reading_percent": 27.393172565688552,
+    "stamp_sec": 1785623488.180659
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.623110356895264,
+    "reading_percent": 27.393172565688552,
+    "stamp_sec": 1785623488.2609935
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.74925947256248,
+    "reading_percent": 27.393172565688552,
+    "stamp_sec": 1785623488.3300989
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.982276665878768,
+    "reading_percent": 26.760582647484032,
+    "stamp_sec": 1785623488.393031
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.367760806074926,
+    "reading_percent": 26.642322677832777,
+    "stamp_sec": 1785623488.469259
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.49493149773123,
+    "reading_percent": 26.508195749342875,
+    "stamp_sec": 1785623488.5469463
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.801070882960172,
+    "reading_percent": 26.239956034288355,
+    "stamp_sec": 1785623488.6282513
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.985307430005072,
+    "reading_percent": 26.18531053974191,
+    "stamp_sec": 1785623488.702616
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.87306105142303,
+    "reading_percent": 26.18531053974191,
+    "stamp_sec": 1785623488.7735448
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.678576615239987,
+    "reading_percent": 26.18531053974191,
+    "stamp_sec": 1785623488.8462853
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.715251206806244,
+    "reading_percent": 26.18531053974191,
+    "stamp_sec": 1785623488.9185479
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.822117772770536,
+    "reading_percent": 26.163112385058916,
+    "stamp_sec": 1785623488.9779768
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.792266846975412,
+    "reading_percent": 26.194596156495034,
+    "stamp_sec": 1785623489.0528097
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.07716821481819,
+    "reading_percent": 26.194596156495034,
+    "stamp_sec": 1785623489.124458
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.686616854030536,
+    "reading_percent": 26.194596156495034,
+    "stamp_sec": 1785623489.1964808
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.606360852494145,
+    "reading_percent": 26.194596156495034,
+    "stamp_sec": 1785623489.2699323
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.352055080652352,
+    "reading_percent": 26.306025204053995,
+    "stamp_sec": 1785623489.3449445
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.87060376255628,
+    "reading_percent": 26.306025204053995,
+    "stamp_sec": 1785623489.4100041
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.419804535875677,
+    "reading_percent": 26.390671208874426,
+    "stamp_sec": 1785623489.4933767
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.321998929116468,
+    "reading_percent": 26.390671208874426,
+    "stamp_sec": 1785623489.5724921
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.56655624606598,
+    "reading_percent": 26.432653127274214,
+    "stamp_sec": 1785623489.633304
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.124716895324205,
+    "reading_percent": 26.111974211631896,
+    "stamp_sec": 1785623489.712346
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.528345391892522,
+    "reading_percent": 25.843961090501562,
+    "stamp_sec": 1785623489.783252
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.801070882960172,
+    "reading_percent": 25.843961090501562,
+    "stamp_sec": 1785623489.8581586
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.15508136614383,
+    "reading_percent": 25.843961090501562,
+    "stamp_sec": 1785623489.9311507
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.565148873066374,
+    "reading_percent": 25.843961090501562,
+    "stamp_sec": 1785623490.0012116
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.984361620972493,
+    "reading_percent": 26.18531053974191,
+    "stamp_sec": 1785623490.0676847
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.093143392710346,
+    "reading_percent": 26.18531053974191,
+    "stamp_sec": 1785623490.1523757
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.211705211156467,
+    "reading_percent": 25.8772616637084,
+    "stamp_sec": 1785623490.2183337
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.63969579005854,
+    "reading_percent": 26.35551285022526,
+    "stamp_sec": 1785623490.29074
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.901006359369593,
+    "reading_percent": 26.07990859277289,
+    "stamp_sec": 1785623490.362133
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.176329834200246,
+    "reading_percent": 26.07990859277289,
+    "stamp_sec": 1785623490.4418948
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.497546790824376,
+    "reading_percent": 26.07990859277289,
+    "stamp_sec": 1785623490.5071485
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.422420714006567,
+    "reading_percent": 26.07990859277289,
+    "stamp_sec": 1785623490.569346
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.872359835580184,
+    "reading_percent": 26.07990859277289,
+    "stamp_sec": 1785623490.6559498
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.467408736430933,
+    "reading_percent": 27.164822081413583,
+    "stamp_sec": 1785623490.7169151
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.686616854030536,
+    "reading_percent": 26.306025204053995,
+    "stamp_sec": 1785623490.7921848
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.28160266409591,
+    "reading_percent": 27.164822081413583,
+    "stamp_sec": 1785623490.865459
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.987027428269638,
+    "reading_percent": 27.164822081413583,
+    "stamp_sec": 1785623490.9402375
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.686616854030536,
+    "reading_percent": 26.306025204053995,
+    "stamp_sec": 1785623491.0163743
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.705283213514008,
+    "reading_percent": 26.306025204053995,
+    "stamp_sec": 1785623491.086794
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.901006359369593,
+    "reading_percent": 26.28633779470678,
+    "stamp_sec": 1785623491.1589456
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.705283213514008,
+    "reading_percent": 26.28633779470678,
+    "stamp_sec": 1785623491.2335734
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.99747611779862,
+    "reading_percent": 26.28633779470678,
+    "stamp_sec": 1785623491.3098345
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.823980697123165,
+    "reading_percent": 26.1611475587442,
+    "stamp_sec": 1785623491.3851376
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.822117772770536,
+    "reading_percent": 26.1611475587442,
+    "stamp_sec": 1785623491.4462454
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.686616854030536,
+    "reading_percent": 26.163112385058916,
+    "stamp_sec": 1785623491.5250978
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.686616854030536,
+    "reading_percent": 26.163112385058916,
+    "stamp_sec": 1785623491.600467
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.98363632883776,
+    "reading_percent": 26.306025204053995,
+    "stamp_sec": 1785623491.6760705
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.715251206806244,
+    "reading_percent": 26.306025204053995,
+    "stamp_sec": 1785623491.7442553
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.403538560215992,
+    "reading_percent": 26.306025204053995,
+    "stamp_sec": 1785623491.8188784
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.155804530417598,
+    "reading_percent": 26.306025204053995,
+    "stamp_sec": 1785623491.884128
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.792266846975412,
+    "reading_percent": 26.275824552181458,
+    "stamp_sec": 1785623491.9503055
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.812784149810494,
+    "reading_percent": 26.194596156495034,
+    "stamp_sec": 1785623492.0264113
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.76096336972869,
+    "reading_percent": 26.194596156495034,
+    "stamp_sec": 1785623492.1001244
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -16.91127631790416,
+    "reading_percent": 26.194596156495034,
+    "stamp_sec": 1785623492.1677613
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -16.94882415343047,
+    "reading_percent": 26.227611933947152,
+    "stamp_sec": 1785623492.2413793
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.985307430005072,
+    "reading_percent": 26.227611933947152,
+    "stamp_sec": 1785623492.3041477
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.774461800087597,
+    "reading_percent": 26.227611933947152,
+    "stamp_sec": 1785623492.3705285
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.565148873066374,
+    "reading_percent": 26.434137483576897,
+    "stamp_sec": 1785623492.4424741
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.0356537942425,
+    "reading_percent": 26.434137483576897,
+    "stamp_sec": 1785623492.5241308
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.89034149533621,
+    "reading_percent": 26.213375139447614,
+    "stamp_sec": 1785623492.5866604
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.17256918005731,
+    "reading_percent": 26.434137483576897,
+    "stamp_sec": 1785623492.6600666
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.00858719788502,
+    "reading_percent": 27.902891285793558,
+    "stamp_sec": 1785623492.7409065
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.141381778538406,
+    "reading_percent": 27.902891285793558,
+    "stamp_sec": 1785623492.809879
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.547723180511056,
+    "reading_percent": 27.507216361514992,
+    "stamp_sec": 1785623492.8937776
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.393850398822416,
+    "reading_percent": 27.507216361514992,
+    "stamp_sec": 1785623492.9711468
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.76096336972869,
+    "reading_percent": 26.881084638175544,
+    "stamp_sec": 1785623493.0346751
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.71232687277405,
+    "reading_percent": 26.614805984362,
+    "stamp_sec": 1785623493.1164575
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.07716821481819,
+    "reading_percent": 26.278908847285212,
+    "stamp_sec": 1785623493.1873484
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.044192153926442,
+    "reading_percent": 26.278908847285212,
+    "stamp_sec": 1785623493.2591596
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.74925947256248,
+    "reading_percent": 26.239956034288355,
+    "stamp_sec": 1785623493.33835
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.04629468509131,
+    "reading_percent": 26.239956034288355,
+    "stamp_sec": 1785623493.420113
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.991145969399124,
+    "reading_percent": 26.239956034288355,
+    "stamp_sec": 1785623493.4865313
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.365727841071564,
+    "reading_percent": 26.239956034288355,
+    "stamp_sec": 1785623493.577747
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.792266846975412,
+    "reading_percent": 26.194596156495034,
+    "stamp_sec": 1785623493.642115
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.91918002417431,
+    "reading_percent": 26.194596156495034,
+    "stamp_sec": 1785623493.7060304
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.218644724618503,
+    "reading_percent": 26.799595408944867,
+    "stamp_sec": 1785623493.7924523
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.073540809191098,
+    "reading_percent": 26.799595408944867,
+    "stamp_sec": 1785623493.8677702
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.07716821481819,
+    "reading_percent": 26.799595408944867,
+    "stamp_sec": 1785623493.9323294
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.13169116705764,
+    "reading_percent": 26.799595408944867,
+    "stamp_sec": 1785623494.010325
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.98363632883776,
+    "reading_percent": 26.799595408944867,
+    "stamp_sec": 1785623494.0791006
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.73679783521907,
+    "reading_percent": 26.95263650854615,
+    "stamp_sec": 1785623494.1504643
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.547723180511056,
+    "reading_percent": 27.047458763974817,
+    "stamp_sec": 1785623494.2169063
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.64309874100026,
+    "reading_percent": 27.047458763974817,
+    "stamp_sec": 1785623494.2975273
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.64309874100026,
+    "reading_percent": 27.047458763974817,
+    "stamp_sec": 1785623494.367543
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -20.072048197794683,
+    "reading_percent": 26.351923757867027,
+    "stamp_sec": 1785623494.4397163
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.76096336972869,
+    "reading_percent": 26.351923757867027,
+    "stamp_sec": 1785623494.5250444
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.801070882960172,
+    "reading_percent": 26.227611933947152,
+    "stamp_sec": 1785623494.5965397
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.565148873066374,
+    "reading_percent": 26.227611933947152,
+    "stamp_sec": 1785623494.6623454
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.982276665878768,
+    "reading_percent": 26.18531053974191,
+    "stamp_sec": 1785623494.7513378
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.565148873066374,
+    "reading_percent": 26.227611933947152,
+    "stamp_sec": 1785623494.8183768
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.352055080652352,
+    "reading_percent": 26.434137483576897,
+    "stamp_sec": 1785623494.895647
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.28160266409591,
+    "reading_percent": 26.434137483576897,
+    "stamp_sec": 1785623494.969171
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.686616854030536,
+    "reading_percent": 26.434137483576897,
+    "stamp_sec": 1785623495.0407493
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.006044655313957,
+    "reading_percent": 27.023824702040372,
+    "stamp_sec": 1785623495.110929
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.894990479334428,
+    "reading_percent": 27.023824702040372,
+    "stamp_sec": 1785623495.1842687
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.158245820587272,
+    "reading_percent": 26.306025204053995,
+    "stamp_sec": 1785623495.2641459
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.015911240941048,
+    "reading_percent": 26.08625354144598,
+    "stamp_sec": 1785623495.3397136
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -19.071867942795205,
+    "reading_percent": 25.95871841417948,
+    "stamp_sec": 1785623495.4064157
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.894990479334428,
+    "reading_percent": 25.95871841417948,
+    "stamp_sec": 1785623495.4844677
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.604245030228256,
+    "reading_percent": 25.95871841417948,
+    "stamp_sec": 1785623495.5587952
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.28160266409591,
+    "reading_percent": 26.08625354144598,
+    "stamp_sec": 1785623495.6268387
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.28160266409591,
+    "reading_percent": 27.44760276661826,
+    "stamp_sec": 1785623495.6971056
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -18.686616854030536,
+    "reading_percent": 27.44760276661826,
+    "stamp_sec": 1785623495.7663553
+  },
+  {
+    "marker_id": 0,
+    "needle_angle_deg": -17.15831112231977,
+    "reading_percent": 27.787893670178047,
+    "stamp_sec": 1785623495.8404572
+  }
+]

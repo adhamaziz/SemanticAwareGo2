@@ -149,12 +149,12 @@ def generate_launch_description():
             {"use_sim_time": use_sim_time},
             {"base_link_frame": "base_footprint"},
             {"odom_frame": "odom"},
-            {"world_frame": "odom"},
+            {"world_frame": "odom"}, 
             {"publish_tf": True},
             {"frequency": 50.0},
-            {"two_d_mode": True},
+            {"two_d_mode": False}, # change from true to false
             {"odom0": "odom/gz"},
-            {"odom0_config": [True,  True,  False,    # x, y pose
+            {"odom0_config": [True,  True,  True,    # x, y ,z pose 
                   False, False, True,     # yaw pose (sole absolute yaw source)
                   False, False, False,
                   False, False, False,    # vyaw OFF

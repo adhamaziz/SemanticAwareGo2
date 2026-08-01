@@ -213,5 +213,55 @@
         </visual>
       </link>
     </model>
+
+    <model name="gauge_dial_0">
+      <static>true</static>
+      <pose>1.334 0.889 0.45 0 0 -2.5536</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>0.005 0.12 0.12</size></box></geometry>
+          <material>
+            <ambient>1 1 1 1</ambient>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+            <pbr>
+              <metal>
+                <albedo_map>textures/gauge_dial.png</albedo_map>
+                <metalness>0.0</metalness>
+                <roughness>1.0</roughness>
+              </metal>
+            </pbr>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="gauge_needle_0">
+      <static>true</static>
+      <pose>1.334 0.889 0.45 -1.0472 0.0 -2.5536</pose>
+      <link name="link">
+        <!-- Pointer arm: extends from near the pivot outward, this is the
+            "pointing" end. Local Y is the needle's along-axis before the
+            link's own pose rotation is applied. -->
+        <visual name="pointer">
+          <pose>0 0.045 0 0 0 0</pose>
+          <geometry><box><size>0.008 0.05 0.006</size></box></geometry>
+          <material>
+            <ambient>0.85 0.05 0.05 1</ambient>
+            <diffuse>0.85 0.05 0.05 1</diffuse>
+            <specular>0.9 0.9 0.9 1</specular>
+          </material>
+        </visual>
+        <visual name="tail">
+          <pose>0 -0.0125 0 0 0 0</pose>
+          <geometry><box><size>0.008 0.015 0.006</size></box></geometry>
+          <material>
+            <ambient>0.85 0.05 0.05 1</ambient>
+            <diffuse>0.85 0.05 0.05 1</diffuse>
+            <specular>0.9 0.9 0.9 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
   </world>
 </sdf>
